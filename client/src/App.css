@@ -1,28 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Squada+One|Yeseva+One&display=swap");
+body {
+  background-color: #f1ebdb;
+}
+
 .App {
-  text-align: center;
+  font-family: Fugaz One;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App .section {
+  min-height: 100vh;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.App .hero {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("./images/hero.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./images/hero.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .hero h1,
+.App .hero p,
+.App .hero h2 {
+  margin: 0;
+}
+
+.App .hero h2 {
+  font-size: 8em;
+  text-transform: uppercase;
+  color: rgba(90, 85, 85, 0.774);
+}
+
+.App .hero h1 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10em;
+  text-transform: uppercase;
+}
+
+.App .hero p {
+  font-size: 2em;
+  font-family: Squada One;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.App .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.App-intro {
-  font-size: large;
+.App .about p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 52px;
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App .about img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 500px;
+  border-radius: 0.5em;
 }
+
+.App .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .services h1 {
+  font-size: 64px;
+  color: #707070;
+}
+/*# sourceMappingURL=App.css.map */
