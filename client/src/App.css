@@ -1,10 +1,51 @@
-@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Squada+One|Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Oxygen:300&display=swap");
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 body {
   background-color: #f1ebdb;
 }
 
 .App {
   font-family: Fugaz One;
+}
+
+.App .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 24px;
+}
+
+.App .nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: Oxygen;
+}
+
+.App .nav img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .App .section {
@@ -37,20 +78,20 @@ body {
 }
 
 .App .hero h2 {
-  font-size: 8em;
+  font-size: 7em;
   text-transform: uppercase;
   color: rgba(90, 85, 85, 0.774);
 }
 
 .App .hero h1 {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 10em;
+  font-size: 9em;
   text-transform: uppercase;
 }
 
 .App .hero p {
   font-size: 2em;
-  font-family: Squada One;
+  font-family: Oxygen;
   color: white;
 }
 
@@ -61,17 +102,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 32px;
+  padding: 128px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.App .about p {
+.App .about .about-text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 52px;
+}
+
+.App .about .about-text h1 {
+  text-transform: uppercase;
+}
+
+.App .about .about-text p {
+  font-family: Oxygen;
   font-size: 24px;
 }
 
@@ -83,7 +132,8 @@ body {
   border-radius: 0.5em;
 }
 
-.App .services {
+.App .services,
+.App .insurance {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,8 +146,144 @@ body {
           align-items: center;
 }
 
-.App .services h1 {
+.App .services .service-icons,
+.App .insurance .service-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.App .services .service-icons .serv-block,
+.App .insurance .service-icons .serv-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .services .service-icons .serv-block img,
+.App .insurance .service-icons .serv-block img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.App .services .service-icons .serv-block span,
+.App .insurance .service-icons .serv-block span {
+  color: #707070;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+.App .services h1,
+.App .insurance h1 {
   font-size: 64px;
   color: #707070;
+  text-transform: uppercase;
+}
+
+.App .insurance h3 {
+  font-family: Oxygen;
+  text-transform: uppercase;
+}
+
+.App .insurance .ins-block {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .insurance .ins-block img {
+  height: 150px;
+}
+
+.App .insurance .ins-block span {
+  font-family: Oxygen;
+}
+
+.App .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 64px;
+}
+
+.App .contact .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.App .contact .contact-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 16px;
+  width: 40vw;
+}
+
+.App .contact .contact-form .form-group input,
+.App .contact .contact-form .form-group textarea {
+  padding: 8px;
+  background: none;
+  border: 1px dashed #707070;
+}
+
+.App .contact .contact-form .form-group textarea {
+  height: 100px;
+}
+
+.App .contact .contact-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer {
+  font-family: Oxygen;
+  background-color: #7b7a67;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=App.css.map */
