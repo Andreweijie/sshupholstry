@@ -286,4 +286,10 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.partners .InfiniteCarouselFrame ul {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
 /*# sourceMappingURL=App.css.map */

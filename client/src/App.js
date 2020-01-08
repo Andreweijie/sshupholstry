@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Images from "./components/Images";
+import InfiniteCarousel from "react-leaf-carousel";
 import { Route } from "react-router-dom";
 class App extends Component {
   render() {
@@ -44,11 +45,11 @@ class App extends Component {
           <h1>OUR SERVICES</h1>
           <div className="service-icons">
             <div className="serv-block">
-              <img src="https://i.imgur.com/YLKeiSF.png"></img>
-              <span>steering wheel</span>
+              <img src="https://i.imgur.com/EKD7rlJ.png"></img>
+              <span>roof-lining</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/hwIPIgF.png"></img>
+              <img src="https://i.imgur.com/4fdk0AU.png"></img>
               <span>carpet</span>
             </div>
             <div className="serv-block">
@@ -60,8 +61,8 @@ class App extends Component {
               <span>convertible top</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/gqWtkqv.png"></img>
-              <span>roof-lining</span>
+              <img src="https://i.imgur.com/YLKeiSF.png"></img>
+              <span>steering wheel</span>
             </div>
             <div className="serv-block">
               <img src="https://i.imgur.com/1mUnZWH.png"></img>
@@ -76,8 +77,16 @@ class App extends Component {
               <span>gear knob</span>
             </div>
             <div className="serv-block">
-              <img></img>
+              <img src="https://i.imgur.com/nMuwvAs.png"></img>
               <span>furniture</span>
+            </div>
+            <div className="serv-block">
+              <img src="https://i.imgur.com/uqMoSyA.png"></img>
+              <span>sun visor</span>
+            </div>
+            <div className="serv-block">
+              <img src="https://i.imgur.com/MeKuPy6.png"></img>
+              <span>A/B/C Pillar</span>
             </div>
           </div>
         </div>
@@ -112,7 +121,65 @@ class App extends Component {
             </span>
           </div>
         </div>
-        <div className="partners section"></div>
+        <div className="partners section">
+          <InfiniteCarousel
+            breakpoints={[
+              {
+                breakpoint: 500,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3
+                }
+              }
+            ]}
+            dots={true}
+            showSides={true}
+            sidesOpacity={0.5}
+            sideSize={0.1}
+            slidesToScroll={1}
+            slidesToShow={3}
+            scrollOnDevice={true}
+          >
+            <div>
+              <img alt="" src="https://i.imgur.com/o8ktxb7.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/A4FUfBl.png" />
+            </div>
+
+            <div>
+              <img alt="" src="https://i.imgur.com/HhobUPl.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/6VoK58G.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/5At9TWy.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/bbIiTub.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/N292kqL.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/R2ZGgrQ.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/jSFgrVc.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/LY6dFVh.png" />
+            </div>
+          </InfiniteCarousel>
+        </div>
         <div id="contact" className="contact section">
           <div className="contact-form">
             <h1>CONTACT US</h1>

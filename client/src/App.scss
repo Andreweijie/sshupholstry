@@ -173,3 +173,11 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+.partners {
+  .InfiniteCarouselFrame {
+    ul {
+      display: flex !important;
+    }
+  }
+}
