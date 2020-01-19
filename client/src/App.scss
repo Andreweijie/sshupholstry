@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Oxygen:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Oxygen:300|Quicksand&display=swap");
+@font-face {
+  font-family: "Franchise";
+  src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot");
+  src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise")
+      format("svg");
+}
 html {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -10,26 +24,46 @@ html::-webkit-scrollbar {
 }
 body {
   background-color: #f1ebdb;
+  font-family: Quicksand;
 }
-
+h1,
+h2,
+h3 {
+  font-family: Franchise;
+  color: #707070;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+i {
+  border-color: #c69c6d !important;
+}
 .App {
   min-height: 100vh;
   position: relative;
   .nav {
     display: flex;
     justify-content: space-around;
-    padding: 24px;
+    padding: 8px;
+    .logo {
+      height: 76px;
+    }
     .links {
       display: flex;
       flex: 1;
       justify-content: space-evenly;
       font-family: Oxygen;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
     img {
       flex: 1;
     }
   }
-  font-family: Fugaz One;
   .section {
     min-height: 100vh;
   }
@@ -41,6 +75,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .logo {
+      height: 244px;
+    }
     h1,
     p,
     h2 {
@@ -58,7 +95,7 @@ body {
     }
     p {
       font-size: 2em;
-      font-family: Oxygen;
+      font-family: Quicksand;
       color: white;
     }
   }
@@ -72,9 +109,10 @@ body {
       padding: 52px;
       h1 {
         text-transform: uppercase;
+        font-size: 48px;
       }
       p {
-        font-family: Oxygen;
+        font-family: Quicksand;
         font-size: 24px;
       }
     }
@@ -94,7 +132,7 @@ body {
     .service-icons {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 8px;
+      grid-gap: 24px;
       .serv-block {
         border: 4px dashed #c69c6d;
         display: flex;
@@ -113,11 +151,13 @@ body {
     }
     h1 {
       font-size: 64px;
-      color: #707070;
-      text-transform: uppercase;
     }
   }
   .insurance {
+    h1 {
+      color: #707070;
+      text-transform: uppercase;
+    }
     h3 {
       font-family: Oxygen;
       text-transform: uppercase;
@@ -147,21 +187,46 @@ body {
     }
   }
   .partners {
+    min-height: 60vh;
+    h1 {
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 64px;
+    }
   }
   .contact {
+    div:nth-child(3) {
+      position: relative !important;
+      height: 30% !important;
+    }
     display: flex;
-    padding: 64px;
+    //padding: 64px;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
     .contact-form {
+      padding: 32px;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
 
+      button {
+        border: none;
+        padding: 8px;
+        background-color: #c69c6d;
+        color: #707070;
+        font-weight: bold;
+        margin: 16px;
+      }
+      h1 {
+        font-size: 64px;
+      }
       .form-group {
         display: flex;
         flex-direction: column;
         margin: 16px;
-        width: 40vw;
+        width: 38vw;
         input,
         textarea {
           padding: 8px;
@@ -176,15 +241,24 @@ body {
     }
     .contact-info {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        border: none;
+        padding: 8px;
+        background-color: #c69c6d;
+        color: #707070;
+      }
     }
   }
 }
 
-footer {
-  font-family: Oxygen;
-  background-color: #7b7a67;
-  display: flex;
-  justify-content: center;
+.book {
+  border: none;
+  padding: 8px;
+  background-color: #c69c6d;
+  color: #707070;
 }
 
 .partners {
@@ -200,9 +274,132 @@ footer {
   }
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+.footer {
+  background-color: #c69c6d;
+
   width: 100%;
-  height: 2.5rem;
+  //height: 2.5rem;
+  color: #707070;
+  display: flex;
+  justify-content: space-evenly;
+  div {
+    margin: 8px;
+    svg {
+      padding-right: 8px;
+    }
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+    }
+    .footer-header {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+    .footer-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    .nav {
+      .link {
+        flex: 3 !important;
+      }
+      img {
+        flex: 1;
+      }
+    }
+    .hero {
+      h1,
+      h2 {
+        font-size: 48px;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .about {
+      flex-direction: column;
+      padding: 24px;
+      img {
+        height: auto;
+        width: 350px;
+      }
+      .about-text {
+        padding: 8px;
+        p {
+          font-size: 20px;
+        }
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+    .services {
+      h1 {
+        font-size: 48px;
+      }
+      .service-icons {
+        grid-template-columns: repeat(1, 300px);
+        .serv-block {
+          span {
+            text-align: center;
+          }
+          img {
+            transform: scale(0.5);
+          }
+        }
+      }
+    }
+    .insurance {
+      padding: 8px;
+      span {
+        text-align: center;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      .ins-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .partners {
+      .InfiniteCarouselFrame {
+        img {
+          width: 300px;
+          height: auto;
+        }
+        ul {
+          display: flex !important;
+          align-items: center;
+        }
+      }
+    }
+    .contact {
+      padding: 16px;
+      flex-direction: column;
+      .contact-form {
+        form {
+          .form-group {
+            width: 70vw;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex !important;
+    flex-direction: column !important;
+    div {
+      svg {
+        padding-right: 24px;
+      }
+    }
+  }
 }

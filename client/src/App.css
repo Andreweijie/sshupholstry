@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Oxygen:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Oxygen:300|Quicksand&display=swap");
+@font-face {
+  font-family: "Franchise";
+  src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot");
+  src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff") format("woff"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise") format("svg");
+}
+
 html {
   overflow-y: scroll;
   scrollbar-width: none;
@@ -14,12 +20,28 @@ html::-webkit-scrollbar {
 
 body {
   background-color: #f1ebdb;
+  font-family: Quicksand;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Franchise;
+  color: #707070;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  border-color: #c69c6d !important;
 }
 
 .App {
   min-height: 100vh;
   position: relative;
-  font-family: Fugaz One;
 }
 
 .App .nav {
@@ -28,7 +50,11 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 24px;
+  padding: 8px;
+}
+
+.App .nav .logo {
+  height: 76px;
 }
 
 .App .nav .links {
@@ -42,6 +68,14 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   font-family: Oxygen;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .nav .links a {
+  text-decoration: none;
+  color: black;
 }
 
 .App .nav img {
@@ -73,6 +107,10 @@ body {
           align-items: center;
 }
 
+.App .hero .logo {
+  height: 244px;
+}
+
 .App .hero h1,
 .App .hero p,
 .App .hero h2 {
@@ -93,7 +131,7 @@ body {
 
 .App .hero p {
   font-size: 2em;
-  font-family: Oxygen;
+  font-family: Quicksand;
   color: white;
 }
 
@@ -119,10 +157,11 @@ body {
 
 .App .about .about-text h1 {
   text-transform: uppercase;
+  font-size: 48px;
 }
 
 .App .about .about-text p {
-  font-family: Oxygen;
+  font-family: Quicksand;
   font-size: 24px;
 }
 
@@ -154,7 +193,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 8px;
+  grid-gap: 24px;
 }
 
 .App .services .service-icons .serv-block,
@@ -191,6 +230,9 @@ body {
 .App .services h1,
 .App .insurance h1 {
   font-size: 64px;
+}
+
+.App .insurance h1 {
   color: #707070;
   text-transform: uppercase;
 }
@@ -238,14 +280,37 @@ body {
   font-family: Oxygen;
 }
 
+.App .partners {
+  min-height: 60vh;
+}
+
+.App .partners h1 {
+  color: #707070;
+  text-transform: uppercase;
+  font-size: 64px;
+}
+
 .App .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 64px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150vh;
+}
+
+.App .contact div:nth-child(3) {
+  position: relative !important;
+  height: 30% !important;
 }
 
 .App .contact .contact-form {
+  padding: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +329,19 @@ body {
           flex: 1;
 }
 
+.App .contact .contact-form button {
+  border: none;
+  padding: 8px;
+  background-color: #c69c6d;
+  color: #707070;
+  font-weight: bold;
+  margin: 16px;
+}
+
+.App .contact .contact-form h1 {
+  font-size: 64px;
+}
+
 .App .contact .contact-form .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,7 +351,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 16px;
-  width: 40vw;
+  width: 38vw;
 }
 
 .App .contact .contact-form .form-group input,
@@ -291,17 +369,30 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-footer {
-  font-family: Oxygen;
-  background-color: #7b7a67;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .contact .contact-info button {
+  border: none;
+  padding: 8px;
+  background-color: #c69c6d;
+  color: #707070;
+}
+
+.book {
+  border: none;
+  padding: 8px;
+  background-color: #c69c6d;
+  color: #707070;
 }
 
 .partners .InfiniteCarouselFrame img {
@@ -318,10 +409,150 @@ footer {
           align-items: center;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+.footer {
+  background-color: #c69c6d;
   width: 100%;
-  height: 2.5rem;
+  color: #707070;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer div {
+  margin: 8px;
+}
+
+.footer div svg {
+  padding-right: 8px;
+}
+
+.footer div ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.footer div .footer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+}
+
+.footer div .footer-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .App .nav .link {
+    -webkit-box-flex: 3 !important;
+        -ms-flex: 3 !important;
+            flex: 3 !important;
+  }
+  .App .nav img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .App .hero h1,
+  .App .hero h2 {
+    font-size: 48px;
+  }
+  .App .hero p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .App .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 24px;
+  }
+  .App .about img {
+    height: auto;
+    width: 350px;
+  }
+  .App .about .about-text {
+    padding: 8px;
+  }
+  .App .about .about-text p {
+    font-size: 20px;
+  }
+  .App .about .about-text h1 {
+    text-align: center;
+  }
+  .App .services h1 {
+    font-size: 48px;
+  }
+  .App .services .service-icons {
+    -ms-grid-columns: (300px)[1];
+        grid-template-columns: repeat(1, 300px);
+  }
+  .App .services .service-icons .serv-block span {
+    text-align: center;
+  }
+  .App .services .service-icons .serv-block img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  .App .insurance {
+    padding: 8px;
+  }
+  .App .insurance span {
+    text-align: center;
+  }
+  .App .insurance h1 {
+    font-size: 30px;
+  }
+  .App .insurance .ins-grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .App .partners .InfiniteCarouselFrame img {
+    width: 300px;
+    height: auto;
+  }
+  .App .partners .InfiniteCarouselFrame ul {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .contact {
+    padding: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .contact .contact-form form .form-group {
+    width: 70vw;
+  }
+  .footer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .footer div svg {
+    padding-right: 24px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

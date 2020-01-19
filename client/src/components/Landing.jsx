@@ -6,6 +6,7 @@ export default class Landing extends Component {
     return (
       <div>
         <div className="hero section">
+          <img className="logo" src={require("../images/logo.svg")}></img>
           <h2>sinhockheng</h2>
           <h1>upholstry</h1>
           <p>
@@ -113,13 +114,14 @@ export default class Landing extends Component {
           </div>
         </div>
         <div className="partners section">
+          <h1 style={{ textAlign: "center" }}>Insurance Partners</h1>
           <InfiniteCarousel
             breakpoints={[
               {
                 breakpoint: 500,
                 settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
+                  slidesToShow: 1,
+                  slidesToScroll: 1
                 }
               },
               {
@@ -130,7 +132,7 @@ export default class Landing extends Component {
                 }
               }
             ]}
-            dots={true}
+            dots={false}
             showSides={true}
             sidesOpacity={0.5}
             sideSize={0.1}
@@ -170,41 +172,6 @@ export default class Landing extends Component {
               <img alt="" src="https://i.imgur.com/LY6dFVh.png" />
             </div>
           </InfiniteCarousel>
-        </div>
-        <div id="contact" className="contact section">
-          <div className="contact-form">
-            <h1>CONTACT US</h1>
-            <form>
-              <div className="form-group">
-                <label>Name</label>
-                <input type="text"></input>
-              </div>
-              <div className="form-group">
-                <label>Email</label>
-                <input type="email"></input>
-              </div>
-              <div className="form-group">
-                <label>Message</label>
-                <textarea></textarea>
-              </div>
-            </form>
-          </div>
-          <div className="contact-info">
-            <h4>
-              Address:
-              <a
-                target="#"
-                href="https://www.google.com/maps/place/Sin+Hock+Heng+Upholstery/@1.3586024,103.836656,17z/data=!3m1!4b1!4m5!3m4!1s0x31da1724089c4d9b:0x3fd503e1536b2410!8m2!3d1.3586024!4d103.8388447"
-              >
-                7 Sin Ming Industrial Estate Sector C, #01-90, Singapore 575642
-              </a>
-            </h4>
-            <h4>Telephone: 64548160, 64548179</h4>
-            <img
-              style={{ height: 400 }}
-              src={require("../images/Capture.PNG")}
-            ></img>
-          </div>
         </div>
       </div>
     );
