@@ -18,8 +18,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="nav">
-          <img className="logo" src={require("./images/logo.svg")}></img>
           <nav className="links">
+            <Link to="/">Home</Link>
             <Link to="/gallery">Gallery</Link>
             <a>Services</a>
             <Link to="/contact">Contact</Link>
@@ -32,12 +32,18 @@ class App extends Component {
         <div className="footer">
           <div>
             <span className="footer-header">Social</span>
-            <FontAwesomeIcon
-              size="3x"
-              icon={faFacebookSquare}
-            ></FontAwesomeIcon>
-            <FontAwesomeIcon size="3x" icon={faInstagram}></FontAwesomeIcon>
-            <FontAwesomeIcon size="3x" icon={faWhatsapp}></FontAwesomeIcon>
+            <a target="_blank" href="https://www.facebook.com/sshupholstery/">
+              <FontAwesomeIcon
+                size="3x"
+                icon={faFacebookSquare}
+              ></FontAwesomeIcon>
+            </a>
+            <a target="_blank">
+              <FontAwesomeIcon size="3x" icon={faInstagram}></FontAwesomeIcon>
+            </a>
+            <a target="_blank">
+              <FontAwesomeIcon size="3x" icon={faWhatsapp}></FontAwesomeIcon>
+            </a>
           </div>
           <div>
             <span className="footer-header">Materials</span>

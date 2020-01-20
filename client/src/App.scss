@@ -284,9 +284,13 @@ i {
   justify-content: space-evenly;
   div {
     margin: 8px;
-    svg {
-      padding-right: 8px;
+    a {
+      svg {
+        padding-right: 8px;
+        color: #707070;
+      }
     }
+
     ul {
       list-style-type: none;
       padding-inline-start: 0;
@@ -304,7 +308,41 @@ i {
   }
 }
 
-@media only screen and (max-width: 600px) {
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 4em;
+      text-transform: uppercase;
+    }
+    .image-cat {
+      width: 100%;
+      display: grid;
+      grid-gap: 4px;
+      grid-template-columns: repeat(3, 500px);
+      img {
+        width: 500px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .image-cat {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1px !important;
+    img {
+      width: 205px !important;
+    }
+  }
   .App {
     .nav {
       .link {
@@ -384,6 +422,12 @@ i {
     .contact {
       padding: 16px;
       flex-direction: column;
+      .contact-info {
+        button {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+      }
       .contact-form {
         form {
           .form-group {

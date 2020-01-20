@@ -42,8 +42,8 @@ export default class Landing extends Component {
               <span>carpet</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/QYEZrKA.png"></img>
-              <span>door panel</span>
+              <img src="https://i.imgur.com/1mUnZWH.png"></img>
+              <span>car seats</span>
             </div>
             <div className="serv-block">
               <img src="https://i.imgur.com/CDn66Jr.png"></img>
@@ -54,8 +54,8 @@ export default class Landing extends Component {
               <span>steering wheel</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/1mUnZWH.png"></img>
-              <span>car seats</span>
+              <img src="https://i.imgur.com/iauq5VJ.png"></img>
+              <span>door panel</span>
             </div>
             <div className="serv-block">
               <img src="https://i.imgur.com/H20zWiA.png"></img>

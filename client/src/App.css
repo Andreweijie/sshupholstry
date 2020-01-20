@@ -425,8 +425,9 @@ i {
   margin: 8px;
 }
 
-.footer div svg {
+.footer div a svg {
   padding-right: 8px;
+  color: #707070;
 }
 
 .footer div ul {
@@ -454,7 +455,62 @@ i {
   grid-gap: 8px;
 }
 
-@media only screen and (max-width: 600px) {
+.gallery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+.gallery .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery .category h3 {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.gallery .category .image-cat {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 4px;
+  -ms-grid-columns: (500px)[3];
+      grid-template-columns: repeat(3, 500px);
+}
+
+.gallery .category .image-cat img {
+  width: 500px;
+  height: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .image-cat {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1px !important;
+  }
+  .image-cat img {
+    width: 205px !important;
+  }
   .App .nav .link {
     -webkit-box-flex: 3 !important;
         -ms-flex: 3 !important;
@@ -538,6 +594,10 @@ i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .App .contact .contact-info button {
+    width: 100%;
+    margin-bottom: 16px;
   }
   .App .contact .contact-form form .form-group {
     width: 70vw;
