@@ -6,6 +6,41 @@ const mapStyles = {
 };
 
 class Contact extends Component {
+  state = {
+    name: "",
+    email: "",
+    message: "",
+    loading: "SUBMIT"
+  };
+
+  onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      loading: "submitting..."
+    });
+    const newMessage = {
+      name: this.state.name,
+      message: this.state.message,
+      email: this.state.email
+    };
+    console.log(newMessage);
+    fetch("https://andreweijie.tech/backend/shh/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newMessage)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data.message);
+      });
+  };
+
   render() {
     return (
       <div id="contact" className="contact section">
@@ -14,17 +49,17 @@ class Contact extends Component {
           <form>
             <div className="form-group">
               <label>Name</label>
-              <input type="text"></input>
+              <input onChange={this.onChange} id="name" type="text"></input>
             </div>
             <div className="form-group">
               <label>Email</label>
-              <input type="email"></input>
+              <input onChange={this.onChange} id="email" type="email"></input>
             </div>
             <div className="form-group">
               <label>Message</label>
-              <textarea></textarea>
+              <textarea onChange={this.onChange} id="message"></textarea>
             </div>
-            <button>SUBMIT</button>
+            <button onClick={this.onSubmit}>{this.state.loading}</button>
           </form>
         </div>
         <div className="contact-info">
