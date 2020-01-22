@@ -335,6 +335,41 @@ i {
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .ins-grid {
+    grid-template-columns: repeat(2, 500px) !important;
+  }
+  .image-cat {
+    grid-template-columns: repeat(3, 400px) !important;
+    img {
+      width: 400px !important;
+    }
+  }
+  .partners {
+    .InfiniteCarouselFrame {
+      img {
+        width: 300px;
+      }
+    }
+  }
+  .about {
+    flex-direction: column;
+    img {
+      height: auto;
+      width: 800px;
+    }
+  }
+  .services {
+    .service-icons {
+      grid-template-columns: repeat(3, 350px) !important;
+      .serv-block {
+        img {
+          transform: scale(0.6) !important;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 500px) {
   .image-cat {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -443,42 +478,6 @@ i {
     div {
       svg {
         padding-right: 24px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .ins-grid {
-    grid-template-columns: repeat(2, 500px) !important;
-  }
-  .image-cat {
-    grid-template-columns: repeat(3, 400px) !important;
-    img {
-      width: 400px !important;
-    }
-  }
-  .partners {
-    .InfiniteCarouselFrame {
-      img {
-        width: 300px;
-      }
-    }
-  }
-  .about {
-    flex-direction: column;
-    img {
-      height: auto;
-      width: 800px;
-    }
-  }
-  .services {
-    .service-icons {
-      grid-template-columns: repeat(3, 350px) !important;
-      .serv-block {
-        img {
-          transform: scale(0.6) !important;
-        }
       }
     }
   }

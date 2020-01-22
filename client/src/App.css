@@ -502,6 +502,41 @@ i {
   height: auto;
 }
 
+@media only screen and (max-width: 1280px) {
+  .ins-grid {
+    -ms-grid-columns: (500px)[2] !important;
+        grid-template-columns: repeat(2, 500px) !important;
+  }
+  .image-cat {
+    -ms-grid-columns: (400px)[3] !important;
+        grid-template-columns: repeat(3, 400px) !important;
+  }
+  .image-cat img {
+    width: 400px !important;
+  }
+  .partners .InfiniteCarouselFrame img {
+    width: 300px;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about img {
+    height: auto;
+    width: 800px;
+  }
+  .services .service-icons {
+    -ms-grid-columns: (350px)[3] !important;
+        grid-template-columns: repeat(3, 350px) !important;
+  }
+  .services .service-icons .serv-block img {
+    -webkit-transform: scale(0.6) !important;
+            transform: scale(0.6) !important;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .image-cat {
     -ms-grid-columns: (1fr)[2] !important;
@@ -613,41 +648,6 @@ i {
   }
   .footer div svg {
     padding-right: 24px;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .ins-grid {
-    -ms-grid-columns: (500px)[2] !important;
-        grid-template-columns: repeat(2, 500px) !important;
-  }
-  .image-cat {
-    -ms-grid-columns: (400px)[3] !important;
-        grid-template-columns: repeat(3, 400px) !important;
-  }
-  .image-cat img {
-    width: 400px !important;
-  }
-  .partners .InfiniteCarouselFrame img {
-    width: 300px;
-  }
-  .about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .about img {
-    height: auto;
-    width: 800px;
-  }
-  .services .service-icons {
-    -ms-grid-columns: (350px)[3] !important;
-        grid-template-columns: repeat(3, 350px) !important;
-  }
-  .services .service-icons .serv-block img {
-    -webkit-transform: scale(0.6) !important;
-            transform: scale(0.6) !important;
   }
 }
 /*# sourceMappingURL=App.css.map */
