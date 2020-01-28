@@ -31,6 +31,37 @@ class App extends Component {
         <Route exact path="/contact" component={Contact}></Route>
         <div className="footer">
           <div>
+            <img className="logo" src={require("./images/logo.svg")}></img>
+            <p>
+              Established in 1980, SSH has a vast experience in upholstery for
+              automotives. Over the years, we have added windscreen replacement
+              and insurance claims into our services as well.
+              <br></br>
+              <br></br>Our track record over the years have proven our finest
+              craftsmanship and precision for automotive upholstery.We have done
+              projects ranging from classic vintage cars to luxury continental
+              sports cars, so rest assured when you leave upholstery project
+              with us.
+            </p>
+            <ul>
+              <li>
+                7 Sin Ming Industrial Estate Sector C, #01-90, Singapore 575642
+              </li>
+              <li>64548160</li>
+              <li>64548179</li>
+              <li>sinhockhengcm@singnet.com</li>
+            </ul>
+            <ul>
+              <li style={{ fontWeight: "bold" }}>Opening Hours</li>
+              <li>Mon: 9AM - 6PM</li>
+              <li>Tue: 9AM - 6PM</li>
+              <li>Wed: 9AM - 6PM</li>
+              <li>Thu: 9AM - 6PM</li>
+              <li>Fri: 9AM - 6PM</li>
+              <li>Sat: 9AM - 5PM</li>
+            </ul>
+          </div>
+          <div>
             <span className="footer-header">Social</span>
             <a target="_blank" href="https://www.facebook.com/sshupholstery/">
               <FontAwesomeIcon
@@ -44,55 +75,6 @@ class App extends Component {
             <a target="_blank">
               <FontAwesomeIcon size="3x" icon={faWhatsapp}></FontAwesomeIcon>
             </a>
-          </div>
-          <div>
-            <span className="footer-header">Materials</span>
-            <ul className="footer-info">
-              <li>PVC</li>
-              <li>Leather</li>
-              <li>Nappa Leather</li>
-              <li>Alcantara</li>
-            </ul>
-          </div>
-          <div>
-            <span className="footer-header">Services</span>
-            <ul className="footer-info">
-              <li>Arm Rest</li>
-              <li>Carpet</li>
-              <li>Door Panel</li>
-              <li>Dashboard</li>
-              <li>Furniture</li>
-              <li>Gear Knob</li>
-              <li>Handbrake</li>
-              <li>Roof-lining</li>
-              <li>Steering Wheel</li>
-              <li>Sun Visor</li>
-              <li>Soft Convertible Top</li>
-              <li>Seats</li>
-              <li>Van Interior Conversion</li>
-            </ul>
-          </div>
-          <div>
-            <span className="footer-header">Insurance Partners</span>
-            <ul className="footer-info">
-              <li>NTUC Income</li>
-              <li>Sompo Japan</li>
-              <li>MSIG</li>
-              <li>TM Asia</li>
-              <li>ERGO</li>
-              <li>First Capital</li>
-              <li>India International</li>
-              <li>Tokio Marine</li>
-              <li>SHC Capital</li>
-              <li>Lonpac</li>
-              <li>AIG</li>
-              <li>HSBC</li>
-              <li>Etiqa</li>
-              <li>Aviva</li>
-              <li>United Overseas</li>
-              <li>China Taiping</li>
-              <li>Taiping</li>
-            </ul>
           </div>
         </div>
       </div>

@@ -1,33 +1,43 @@
 import React, { Component } from "react";
 import InfiniteCarousel from "react-leaf-carousel";
 
+//<img className="logo" src={require("../images/logo.svg")}></img>
+
 export default class Landing extends Component {
   render() {
     return (
       <div>
         <div className="hero section">
-          <img className="logo" src={require("../images/logo.svg")}></img>
           <h2>sinhockheng</h2>
           <h1>upholstry</h1>
-          <p>
-            We stand by integrity and dedication to provide the finest
-            craftsmanship to our customers.
-          </p>
         </div>
         <div id="about" className="about section">
-          <img src={require("../images/about.jpg")}></img>
-          <div className="about-text">
-            <h1>About SSH Upholstery</h1>
-            <p>
-              Established in 1980, SSH has a vast experience in upholstery for
-              automotives. Over the years, we have added windscreen replacement
-              and insurance claims into our services as well. <br></br>
-              <br></br>Our track record over the years have proven our finest
-              craftsmanship and precision for automotive upholstery.We have done
-              projects ranging from classic vintage cars to luxury continental
-              sports cars, so rest assured when you leave upholstery project
-              with us.
-            </p>
+          <div className="about-info">
+            <img src={require("../images/about.jpg")}></img>
+            <div className="about-text">
+              <h1>About SSH Upholstery</h1>
+              <p>
+                Established in 1980, SSH has a vast experience in upholstery for
+                automotives. Over the years, we have added windscreen
+                replacement and insurance claims into our services as well.
+                <br></br>
+                <br></br>Our track record over the years have proven our finest
+                craftsmanship and precision for automotive upholstery.We have
+                done projects ranging from classic vintage cars to luxury
+                continental sports cars, so rest assured when you leave
+                upholstery project with us.
+              </p>
+            </div>
+          </div>
+          <div className="about-company">
+            <h1>
+              <span>mission</span>We stand by integrity and dedication to
+              provide the finest craftsmanship to our customers.
+            </h1>
+            <h1>
+              <span>vision</span>Bring innovation and leading edge upholstery
+              design to every automotive in the community
+            </h1>
           </div>
         </div>
         <div id="services" className="services section">
@@ -133,7 +143,7 @@ export default class Landing extends Component {
               }
             ]}
             dots={false}
-            showSides={true}
+            showSides={false}
             sidesOpacity={0.5}
             sideSize={0.1}
             slidesToScroll={1}

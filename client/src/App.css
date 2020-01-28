@@ -88,6 +88,10 @@ i {
   min-height: 100vh;
 }
 
+.App .section h1 {
+  text-align: center;
+}
+
 .App .hero {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("./images/hero.jpg");
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./images/hero.jpg");
@@ -118,21 +122,15 @@ i {
 }
 
 .App .hero h2 {
-  font-size: 7em;
+  font-size: 5em;
   text-transform: uppercase;
   color: rgba(90, 85, 85, 0.774);
 }
 
 .App .hero h1 {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 9em;
+  font-size: 6em;
   text-transform: uppercase;
-}
-
-.App .hero p {
-  font-size: 2em;
-  font-family: Quicksand;
-  color: white;
 }
 
 .App .about {
@@ -142,35 +140,71 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 128px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-.App .about .about-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 52px;
+.App .about .about-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.App .about .about-text h1 {
-  text-transform: uppercase;
-  font-size: 48px;
-}
-
-.App .about .about-text p {
-  font-family: Quicksand;
-  font-size: 24px;
-}
-
-.App .about img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 500px;
+.App .about .about-info img {
+  width: 350px;
+  height: auto;
   border-radius: 0.5em;
+}
+
+.App .about .about-info .about-text h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+.App .about .about-info .about-text p {
+  font-family: Quicksand;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.App .about .about-company h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 0.4em;
+}
+
+.App .about .about-company h1 span {
+  font-size: 1.5em;
 }
 
 .App .services,
@@ -191,8 +225,8 @@ i {
 .App .insurance .service-icons {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (400px)[1];
+      grid-template-columns: repeat(1, 400px);
   grid-gap: 24px;
 }
 
@@ -245,10 +279,10 @@ i {
 .App .insurance .ins-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
   grid-gap: 20px;
 }
 
@@ -276,8 +310,11 @@ i {
 }
 
 .App .insurance .ins-grid .ins-block span {
+  color: #707070;
   font-size: 20px;
   font-family: Oxygen;
+  font-weight: bold;
+  text-align: center;
 }
 
 .App .partners {
@@ -416,6 +453,10 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -423,6 +464,10 @@ i {
 
 .footer div {
   margin: 8px;
+}
+
+.footer div p {
+  padding: 8px;
 }
 
 .footer div a svg {
@@ -434,6 +479,7 @@ i {
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+  padding: 8px;
 }
 
 .footer div .footer-header {
@@ -500,154 +546,5 @@ i {
 .gallery .category .image-cat img {
   width: 500px;
   height: auto;
-}
-
-@media only screen and (max-width: 1280px) {
-  .ins-grid {
-    -ms-grid-columns: (500px)[2] !important;
-        grid-template-columns: repeat(2, 500px) !important;
-  }
-  .image-cat {
-    -ms-grid-columns: (400px)[3] !important;
-        grid-template-columns: repeat(3, 400px) !important;
-  }
-  .image-cat img {
-    width: 400px !important;
-  }
-  .partners .InfiniteCarouselFrame img {
-    width: 300px;
-  }
-  .about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .about img {
-    height: auto;
-    width: 800px;
-  }
-  .services .service-icons {
-    -ms-grid-columns: (350px)[3] !important;
-        grid-template-columns: repeat(3, 350px) !important;
-  }
-  .services .service-icons .serv-block img {
-    -webkit-transform: scale(0.6) !important;
-            transform: scale(0.6) !important;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .image-cat {
-    -ms-grid-columns: (1fr)[2] !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-    grid-gap: 1px !important;
-  }
-  .image-cat img {
-    width: 205px !important;
-  }
-  .App .nav .link {
-    -webkit-box-flex: 3 !important;
-        -ms-flex: 3 !important;
-            flex: 3 !important;
-  }
-  .App .nav img {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .App .hero h1,
-  .App .hero h2 {
-    font-size: 48px;
-  }
-  .App .hero p {
-    font-size: 20px;
-    text-align: center;
-  }
-  .App .about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 24px;
-  }
-  .App .about img {
-    height: auto;
-    width: 350px;
-  }
-  .App .about .about-text {
-    padding: 8px;
-  }
-  .App .about .about-text p {
-    font-size: 20px;
-  }
-  .App .about .about-text h1 {
-    text-align: center;
-  }
-  .App .services h1 {
-    font-size: 48px;
-  }
-  .App .services .service-icons {
-    -ms-grid-columns: (300px)[1];
-        grid-template-columns: repeat(1, 300px);
-  }
-  .App .services .service-icons .serv-block span {
-    text-align: center;
-  }
-  .App .services .service-icons .serv-block img {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  .App .insurance {
-    padding: 8px;
-  }
-  .App .insurance span {
-    text-align: center;
-  }
-  .App .insurance h1 {
-    font-size: 30px;
-  }
-  .App .insurance .ins-grid {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-  .App .partners .InfiniteCarouselFrame img {
-    width: 300px;
-    height: auto;
-  }
-  .App .partners .InfiniteCarouselFrame ul {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .App .contact {
-    padding: 16px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .App .contact .contact-info button {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  .App .contact .contact-form form .form-group {
-    width: 70vw;
-  }
-  .footer {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
-  .footer div svg {
-    padding-right: 24px;
-  }
 }
 /*# sourceMappingURL=App.css.map */
