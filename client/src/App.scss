@@ -13,6 +13,40 @@
     url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise")
       format("svg");
 }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  .links {
+    .nav-logo {
+      height: 124px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: Oxygen;
+    align-items: center;
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      margin: 8px;
+    }
+    .book {
+      align-self: center;
+      background-color: #990033;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 8px;
+      border-radius: 0.3em;
+    }
+  }
+}
 html {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -42,28 +76,6 @@ i {
 .App {
   min-height: 100vh;
   position: relative;
-  .nav {
-    display: flex;
-    justify-content: space-around;
-    padding: 8px;
-    .logo {
-      height: 76px;
-    }
-    .links {
-      display: flex;
-      flex: 1;
-      justify-content: space-evenly;
-      font-family: Oxygen;
-      align-items: center;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-    img {
-      flex: 1;
-    }
-  }
   .section {
     min-height: 100vh;
     h1 {
