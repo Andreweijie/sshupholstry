@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
+//href = "https://www.google.com/maps/place/Sin+Hock+Heng+Upholstery/@1.3586024,103.836656,17z/data=!3m1!4b1!4m5!3m4!1s0x31da1724089c4d9b:0x3fd503e1536b2410!8m2!3d1.3586024!4d103.8388447"
 const mapStyles = {
   width: "100%",
   height: "100%"
@@ -62,17 +63,7 @@ class Contact extends Component {
             <button onClick={this.onSubmit}>{this.state.loading}</button>
           </form>
         </div>
-        <div className="contact-info">
-          <h4 style={{ textTransform: "uppercase" }}>
-            <a
-              target="#"
-              href="https://www.google.com/maps/place/Sin+Hock+Heng+Upholstery/@1.3586024,103.836656,17z/data=!3m1!4b1!4m5!3m4!1s0x31da1724089c4d9b:0x3fd503e1536b2410!8m2!3d1.3586024!4d103.8388447"
-            >
-              7 Sin Ming Industrial Estate Sector C, #01-90, Singapore 575642
-            </a>
-          </h4>
-          <h4>Telephone: 64548160, 64548179</h4>
-        </div>
+        <div className="contact-info"></div>
 
         <Map
           google={this.props.google}

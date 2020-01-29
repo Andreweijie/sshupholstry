@@ -36,7 +36,10 @@ class App extends Component {
             </p>
             <ul>
               <li>
-                7 Sin Ming Industrial Estate Sector C, #01-90, Singapore 575642
+                <a href="https://www.google.com/maps/place/Sin+Hock+Heng+Upholstery/@1.3586024,103.836656,17z/data=!3m1!4b1!4m5!3m4!1s0x31da1724089c4d9b:0x3fd503e1536b2410!8m2!3d1.3586024!4d103.8388447">
+                  7 Sin Ming Industrial Estate Sector C, #01-90, Singapore
+                  575642
+                </a>
               </li>
               <li>64548160</li>
               <li>64548179</li>
@@ -52,8 +55,7 @@ class App extends Component {
               <li>Sat: 9AM - 5PM</li>
             </ul>
           </div>
-          <div>
-            <span className="footer-header">Social</span>
+          <div className="social">
             <a target="_blank" href="https://www.facebook.com/sshupholstery/">
               <FontAwesomeIcon
                 size="3x"
