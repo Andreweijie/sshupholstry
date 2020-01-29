@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import InfiniteCarousel from "react-leaf-carousel";
-
+import Nav from "./Nav";
 //<img className="logo" src={require("../images/logo.svg")}></img>
 
 export default class Landing extends Component {
@@ -8,6 +8,7 @@ export default class Landing extends Component {
     return (
       <div>
         <div className="hero section">
+          <Nav></Nav>
           <h2>sinhockheng</h2>
           <h1>upholstry</h1>
         </div>
@@ -92,6 +93,14 @@ export default class Landing extends Component {
               <img src="https://i.imgur.com/geMNSEv.png"></img>
               <span>van interior</span>
             </div>
+          </div>
+          <div className="booking">
+            <h4>
+              Pick up and delivery Skip the hassle! Let us pick up your vehicle
+              at home and return it to you when it is completed. <br></br>Book
+              an appointment for a Pick Up & Delivery service @ S$50 round trip
+            </h4>
+            <button>Book Now</button>
           </div>
         </div>
         <div className="insurance section">

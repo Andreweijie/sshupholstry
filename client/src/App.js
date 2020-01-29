@@ -17,15 +17,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="nav">
-          <nav className="links">
-            <Link to="/">Home</Link>
-            <Link to="/gallery">Gallery</Link>
-            <a>Services</a>
-            <Link to="/contact">Contact</Link>
-            <a class="book">Book Now</a>
-          </nav>
-        </div>
         <Route exact path="/gallery" component={Images}></Route>
         <Route exact path="/" component={Landing}></Route>
         <Route exact path="/contact" component={Contact}></Route>

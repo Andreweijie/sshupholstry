@@ -72,12 +72,6 @@ class Contact extends Component {
             </a>
           </h4>
           <h4>Telephone: 64548160, 64548179</h4>
-          <h4>
-            Pick up and delivery Skip the hassle! Let us pick up your vehicle at
-            home and return it to you when it is completed. <br></br>Book an
-            appointment for a Pick Up & Delivery service @ S$50 round trip
-          </h4>
-          <button>Book Now</button>
         </div>
 
         <Map
