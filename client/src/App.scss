@@ -183,7 +183,9 @@ i {
         justify-content: flex-end;
         align-items: center;
         img {
-          transform: scale(0.8);
+          //transform: scale(0.8);
+          width: 400px;
+          height: auto;
         }
         span {
           color: #707070;

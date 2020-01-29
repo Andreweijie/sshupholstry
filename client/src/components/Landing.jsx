@@ -49,7 +49,7 @@ export default class Landing extends Component {
               <span>roof-lining</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/4fdk0AU.png"></img>
+              <img src={require("../images/svg/car-pet.svg")}></img>
               <span>carpet</span>
             </div>
             <div className="serv-block">
@@ -65,11 +65,11 @@ export default class Landing extends Component {
               <span>steering wheel</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/iauq5VJ.png"></img>
+              <img src={require("../images/svg/car-door.svg")}></img>
               <span>door panel</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/H20zWiA.png"></img>
+              <img src={require("../images/svg/car-dash.svg")}></img>
               <span>dashboard</span>
             </div>
             <div className="serv-block">

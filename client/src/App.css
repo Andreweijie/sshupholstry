@@ -288,8 +288,8 @@ i {
 
 .App .services .service-icons .serv-block img,
 .App .insurance .service-icons .serv-block img {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  width: 400px;
+  height: auto;
 }
 
 .App .services .service-icons .serv-block span,
