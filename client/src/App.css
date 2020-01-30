@@ -5,6 +5,10 @@
   src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff") format("woff"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise") format("svg");
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,6 +42,7 @@
 }
 
 .nav .links a {
+  text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
@@ -57,17 +62,12 @@
   border-radius: 0.3em;
 }
 
-html {
-  overflow-y: scroll;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
+.contact .nav {
+  position: relative;
 }
 
-html::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+.contact .nav a {
+  color: #181818;
 }
 
 body {
@@ -84,7 +84,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 i {
@@ -208,7 +208,7 @@ i {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #990033;
+  background-color: #990021;
   color: #fff;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -235,7 +235,7 @@ i {
 
 .App .services .booking,
 .App .insurance .booking {
-  background-color: #990033;
+  background-color: #990021;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,13 +248,14 @@ i {
           align-items: center;
   padding: 16px;
   border-radius: 0.3em;
-  margin: 16px;
+  margin-top: 16px;
 }
 
 .App .services .booking h4,
 .App .insurance .booking h4 {
   color: #fff;
   text-align: center;
+  width: 80%;
 }
 
 .App .services .booking button,
@@ -268,15 +269,17 @@ i {
   font-weight: bold;
   font-size: 1.2em;
   padding: 8px;
-  border-radius: 0.3em;
+  margin: 16px;
+  width: 80%;
+  border-radius: 0.1em;
 }
 
 .App .services .service-icons,
 .App .insurance .service-icons {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (400px)[1];
-      grid-template-columns: repeat(1, 400px);
+  -ms-grid-columns: (350px)[1];
+      grid-template-columns: repeat(1, 350px);
   grid-gap: 24px;
 }
 
@@ -300,7 +303,7 @@ i {
 
 .App .services .service-icons .serv-block img,
 .App .insurance .service-icons .serv-block img {
-  width: 400px;
+  width: 350px;
   height: auto;
 }
 
@@ -329,8 +332,8 @@ i {
 .App .insurance .ins-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-columns: (350px)[1];
+      grid-template-columns: repeat(1, 350px);
   -ms-grid-rows: (1fr)[1];
       grid-template-rows: repeat(1, 1fr);
   grid-gap: 20px;
@@ -388,7 +391,6 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 150vh;
 }
 
 .App .contact div:nth-child(3) {
@@ -483,7 +485,7 @@ i {
 }
 
 .partners .InfiniteCarouselFrame img {
-  width: 400px;
+  width: 350px;
   height: auto;
 }
 
@@ -538,11 +540,17 @@ i {
 
 .footer div .logo {
   height: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 280px;
 }
 
 .footer div p {
   padding: 8px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .footer div a svg {
@@ -551,6 +559,9 @@ i {
 }
 
 .footer div ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
@@ -610,5 +621,111 @@ i {
 .gallery .category .image-cat img {
   width: 500px;
   height: auto;
+}
+
+form {
+  width: 80%;
+}
+
+form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .form-group label {
+  color: #fff;
+}
+
+form .form-group input,
+form .form-group select {
+  font-size: 1.5em;
+  border: none;
+  border-radius: 0.1em;
+}
+
+.contact form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact form label {
+  color: #181818;
+}
+
+.contact form button {
+  width: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .booking h4 {
+    width: 50%;
+  }
+  .booking form .form-group {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .nav .links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100vw;
+  }
+  .App .partners .InfiniteCarouselFrame img {
+    width: 300px;
+  }
+  .App .about {
+    padding: 0;
+  }
+  .App .about .about-info img {
+    width: 600px;
+  }
+  .App .about .about-company {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  .App .about .about-company h1 {
+    font-size: 1.8em;
+    width: 400px;
+  }
+  .App .services .service-icons {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .App .insurance .ins-grid {
+    -ms-grid-columns: (400px)[2];
+        grid-template-columns: repeat(2, 400px);
+  }
 }
 /*# sourceMappingURL=App.css.map */

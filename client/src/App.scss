@@ -13,7 +13,9 @@
     url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise")
       format("svg");
 }
-
+html {
+  overflow-x: hidden;
+}
 .nav {
   display: flex;
   justify-content: space-around;
@@ -30,6 +32,7 @@
     font-family: Oxygen;
     align-items: center;
     a {
+      text-transform: uppercase;
       font-weight: bold;
       text-decoration: none;
       color: #fff;
@@ -47,15 +50,13 @@
     }
   }
 }
-html {
-  overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+.contact .nav {
+  position: relative;
+  a {
+    color: #181818;
+  }
 }
-html::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+
 body {
   background-color: #f1ebdb;
   font-family: Quicksand;
@@ -68,7 +69,7 @@ h3 {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 i {
   border-color: #c69c6d !important;
@@ -144,7 +145,7 @@ i {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        background-color: #990033;
+        background-color: #990021;
         color: #fff;
         padding-top: 16px;
         padding-bottom: 16px;
@@ -162,16 +163,17 @@ i {
     flex-direction: column;
     align-items: center;
     .booking {
-      background-color: #990033;
+      background-color: #990021;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 16px;
       border-radius: 0.3em;
-      margin: 16px;
+      margin-top: 16px;
       h4 {
         color: #fff;
         text-align: center;
+        width: 80%;
       }
       button {
         align-self: center;
@@ -181,12 +183,14 @@ i {
         font-weight: bold;
         font-size: 1.2em;
         padding: 8px;
-        border-radius: 0.3em;
+        margin: 16px;
+        width: 80%;
+        border-radius: 0.1em;
       }
     }
     .service-icons {
       display: grid;
-      grid-template-columns: repeat(1, 400px);
+      grid-template-columns: repeat(1, 350px);
       grid-gap: 24px;
       .serv-block {
         border: 4px dashed #c69c6d;
@@ -196,7 +200,7 @@ i {
         align-items: center;
         img {
           //transform: scale(0.8);
-          width: 400px;
+          width: 350px;
           height: auto;
         }
         span {
@@ -221,7 +225,7 @@ i {
     }
     .ins-grid {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 350px);
       grid-template-rows: repeat(1, 1fr);
       grid-gap: 20px;
       .ins-block {
@@ -263,7 +267,7 @@ i {
     //padding: 64px;
     flex-direction: column;
     align-items: center;
-    height: 150vh;
+    //height: 100vh;
     .contact-form {
       width: 100%;
 
@@ -325,7 +329,7 @@ i {
 .partners {
   .InfiniteCarouselFrame {
     img {
-      width: 400px;
+      width: 350px;
       height: auto;
     }
     ul {
@@ -354,10 +358,12 @@ i {
     align-items: center;
     .logo {
       height: auto;
+      flex: 1;
       width: 280px;
     }
     p {
       padding: 8px;
+      flex: 1;
     }
     a {
       svg {
@@ -367,6 +373,7 @@ i {
     }
 
     ul {
+      flex: 1;
       list-style-type: none;
       padding-inline-start: 0;
       padding: 8px;
@@ -401,6 +408,101 @@ i {
       img {
         width: 500px;
         height: auto;
+      }
+    }
+  }
+}
+
+form {
+  width: 80%;
+  .form-group {
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    label {
+      color: #fff;
+    }
+    input,
+    select {
+      font-size: 1.5em;
+      border: none;
+      border-radius: 0.1em;
+    }
+  }
+}
+
+.contact {
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+      color: #181818;
+    }
+    button {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    div {
+      flex-direction: row;
+    }
+  }
+  .booking {
+    h4 {
+      width: 50%;
+    }
+    form {
+      .form-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  .nav {
+    .links {
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100vw;
+    }
+  }
+  .App {
+    .partners {
+      .InfiniteCarouselFrame {
+        img {
+          width: 300px;
+        }
+      }
+    }
+    .about {
+      padding: 0;
+      .about-info {
+        img {
+          width: 600px;
+        }
+      }
+      .about-company {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        h1 {
+          font-size: 1.8em;
+          width: 400px;
+        }
+      }
+    }
+    .services {
+      .service-icons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .insurance {
+      .ins-grid {
+        grid-template-columns: repeat(2, 400px);
       }
     }
   }

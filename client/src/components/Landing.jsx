@@ -4,6 +4,16 @@ import Nav from "./Nav";
 //<img className="logo" src={require("../images/logo.svg")}></img>
 
 export default class Landing extends Component {
+  state = {
+    name: "",
+    email: "",
+    mobile: "",
+    VehicleNo: "",
+    vehicleModel: "",
+    date: "",
+    time: "",
+    loading: "Book Now"
+  };
   render() {
     return (
       <div>
@@ -45,7 +55,7 @@ export default class Landing extends Component {
           <h1>OUR SERVICES</h1>
           <div className="service-icons">
             <div className="serv-block">
-              <img src="https://i.imgur.com/EKD7rlJ.png"></img>
+              <img src={require("../images/svg/car-roof.svg")}></img>
               <span>roof-lining</span>
             </div>
             <div className="serv-block">
@@ -53,15 +63,15 @@ export default class Landing extends Component {
               <span>carpet</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/1mUnZWH.png"></img>
+              <img src={require("../images/svg/car-seat.svg")}></img>
               <span>car seats</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/CDn66Jr.png"></img>
+              <img src={require("../images/svg/car-top.svg")}></img>
               <span>convertible top</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/YLKeiSF.png"></img>
+              <img src={require("../images/svg/car-wheel.svg")}></img>
               <span>steering wheel</span>
             </div>
             <div className="serv-block">
@@ -73,24 +83,24 @@ export default class Landing extends Component {
               <span>dashboard</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/MeKuPy6.png"></img>
+              <img src={require("../images/svg/car-pillar.svg")}></img>
               <span>A/B/C Pillar</span>
             </div>
 
             <div className="serv-block">
-              <img src="https://i.imgur.com/nMuwvAs.png"></img>
+              <img src={require("../images/svg/car-furniture.svg")}></img>
               <span>furniture</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/uqMoSyA.png"></img>
+              <img src={require("../images/svg/car-visor.svg")}></img>
               <span>sun visor</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/UXadTYJ.png"></img>
+              <img src={require("../images/svg/car-knob.svg")}></img>
               <span>gear knob</span>
             </div>
             <div className="serv-block">
-              <img src="https://i.imgur.com/geMNSEv.png"></img>
+              <img src={require("../images/svg/car-van.svg")}></img>
               <span>van interior</span>
             </div>
           </div>
@@ -100,12 +110,133 @@ export default class Landing extends Component {
               at home and return it to you when it is completed. <br></br>Book
               an appointment for a Pick Up & Delivery service @ S$50 round trip
             </h4>
-            <button>Book Now</button>
+            <form>
+              <div className="form-group">
+                <label>Name*</label>
+                <input
+                  required
+                  value={this.state.name}
+                  onChange={this.onChange}
+                  id="name"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group">
+                <label>Mobile No*</label>
+                <input
+                  required
+                  value={this.state.mobile}
+                  onChange={this.onChange}
+                  id="mobile"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group">
+                <label>Email*</label>
+                <input
+                  required
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  id="email"
+                  type="Email"
+                ></input>
+              </div>
+              <div className="form-group">
+                <label>Vehicle No*</label>
+                <input
+                  required
+                  value={this.state.VehicleNo}
+                  onChange={this.onChange}
+                  id="VehicleNo"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group">
+                <label>Vehicle Model*</label>
+                <input
+                  required
+                  value={this.state.vehicleModel}
+                  onChange={this.onChange}
+                  id="vehicleModel"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group">
+                <label>Date*</label>
+                <input
+                  required
+                  value={this.state.date}
+                  onChange={this.onChange}
+                  type="date"
+                  id="date"
+                ></input>
+              </div>
+              <div className="form-group">
+                <label>Time*</label>
+                <select
+                  required
+                  value={this.state.time}
+                  onChange={this.onChange}
+                  id="time"
+                >
+                  <option value="9am - 12pm">9am - 12pm</option>
+                  <option value="1pm - 3pm">1pm - 3pm</option>
+                  <option value="4pm - 6pm">4pm - 6pm</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label>Service*</label>
+                <select
+                  required
+                  value={this.state.service}
+                  onChange={this.onChange}
+                  id="service"
+                >
+                  <option value="Arm Rest">Arm Rest</option>
+                  <option value="Carpet">Carpet</option>
+                  <option value="Door Panel">Door Panel</option>
+                  <option value="Dashboard">Dashboard</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Gear Knob">Gear Knob</option>
+                  <option value="Handbrake">Handbrake</option>
+                  <option value="Roof-Lining">Roof-Lining</option>
+                  <option value="Steering Wheel">Steering Wheel</option>
+                  <option value="Sun Visor">Sun Visor</option>
+                  <option value="Soft Convertible Top">
+                    Soft Convertible Top
+                  </option>
+                  <option value="Seats">Seats</option>
+                  <option value="Van Interior Conversion">
+                    Van Interior Conversion
+                  </option>
+                  <option value="Insurance Claim">Insurance Claim</option>
+                  <option value="Van Window Conversion">
+                    Van Window Conversion
+                  </option>
+                  <option value="V-Kool">V-Kool</option>
+                </select>
+              </div>
+              <div className="form-group full-width">
+                <label>Remarks</label>
+                <textarea
+                  value={this.state.remarks}
+                  onChange={this.onChange}
+                  id="remarks"
+                ></textarea>
+              </div>
+            </form>
+            <button
+              className="full-width"
+              type="submit"
+              onClick={this.onSubmit}
+            >
+              {this.state.loading}
+            </button>
           </div>
         </div>
         <div className="insurance section">
           <h1>windscreen insurance</h1>
-          <h3>windscreen insurance claims procedure</h3>
+
           <div className="ins-grid">
             <div className="ins-block">
               <img src="https://i.imgur.com/vYbdeIo.png"></img>
@@ -165,7 +296,6 @@ export default class Landing extends Component {
             <div>
               <img alt="" src="https://i.imgur.com/A4FUfBl.png" />
             </div>
-
             <div>
               <img alt="" src="https://i.imgur.com/HhobUPl.png" />
             </div>

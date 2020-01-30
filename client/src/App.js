@@ -58,15 +58,15 @@ class App extends Component {
           <div className="social">
             <a target="_blank" href="https://www.facebook.com/sshupholstery/">
               <FontAwesomeIcon
-                size="3x"
+                size="2x"
                 icon={faFacebookSquare}
               ></FontAwesomeIcon>
             </a>
             <a target="_blank">
-              <FontAwesomeIcon size="3x" icon={faInstagram}></FontAwesomeIcon>
+              <FontAwesomeIcon size="2x" icon={faInstagram}></FontAwesomeIcon>
             </a>
             <a target="_blank">
-              <FontAwesomeIcon size="3x" icon={faWhatsapp}></FontAwesomeIcon>
+              <FontAwesomeIcon size="2x" icon={faWhatsapp}></FontAwesomeIcon>
             </a>
           </div>
         </div>

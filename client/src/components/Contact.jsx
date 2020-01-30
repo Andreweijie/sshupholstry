@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
+import Nav from "./Nav";
 //href = "https://www.google.com/maps/place/Sin+Hock+Heng+Upholstery/@1.3586024,103.836656,17z/data=!3m1!4b1!4m5!3m4!1s0x31da1724089c4d9b:0x3fd503e1536b2410!8m2!3d1.3586024!4d103.8388447"
 const mapStyles = {
   width: "100%",
@@ -45,6 +46,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact" className="contact section">
+        <Nav></Nav>
         <div className="contact-form">
           <h1>CONTACT US</h1>
           <form>
@@ -63,17 +65,7 @@ class Contact extends Component {
             <button onClick={this.onSubmit}>{this.state.loading}</button>
           </form>
         </div>
-        <div className="contact-info"></div>
-
-        <Map
-          google={this.props.google}
-          zoom={14}
-          style={mapStyles}
-          initialCenter={{
-            lat: -1.2884,
-            lng: 36.8233
-          }}
-        />
+        <div className="contact-info"> </div>
       </div>
     );
   }
