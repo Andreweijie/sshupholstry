@@ -1,72 +1,58 @@
-@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Oxygen:300|Quicksand&display=swap");
 @font-face {
-  font-family: "Franchise";
-  src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot");
-  src: url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.eot?#iefix")
+  font-family: "Anton";
+  src: url("//db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.eot");
+  src: url("//db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.eot?#iefix")
       format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff2")
+    url("//db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.woff2")
       format("woff2"),
-    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.woff")
+    url("//db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.woff")
       format("woff"),
-    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.ttf")
+    url("//db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.ttf")
       format("truetype"),
-    url("//db.onlinewebfonts.com/t/e5f2f90ef20309de329a7d174c3d2245.svg#Franchise")
+    url("//db.onlinewebfonts.com/t/0d4bd6300a54d19c5fc62fe7e07c48cb.svg#Anton")
       format("svg");
 }
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("//db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.eot");
+  src: url("//db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/ba65c7020043d1d406686743e82e2e5d.svg#Bebas Neue")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.eot");
+  src: url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.svg#Bebas Neue Regular")
+      format("svg");
+}
+
 html {
   overflow-x: hidden;
 }
-.nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-  position: absolute;
-  top: 0;
-  .links {
-    .nav-logo {
-      height: 124px;
-    }
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-family: Oxygen;
-    align-items: center;
-    a {
-      text-transform: uppercase;
-      font-weight: bold;
-      text-decoration: none;
-      color: #fff;
-      margin: 8px;
-    }
-    .book {
-      align-self: center;
-      background-color: #990033;
-      color: #fff;
-      border: none;
-      font-weight: bold;
-      font-size: 1.2em;
-      padding: 8px;
-      border-radius: 0.3em;
-    }
-  }
-}
-.contact .nav {
-  position: relative;
-  a {
-    color: #181818;
-  }
-}
 
 body {
-  background-color: #f1ebdb;
-  font-family: Quicksand;
+  background-color: #f4f9fb;
+  font-family: Anton;
+  color: #111a2f;
 }
-h1,
-h2,
-h3 {
-  font-family: Franchise;
-  color: #707070;
-}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -74,344 +60,278 @@ a {
 i {
   border-color: #c69c6d !important;
 }
-.App {
-  min-height: 100vh;
-  position: relative;
-  .section {
-    min-height: 100vh;
-    h1 {
-      text-align: center;
-    }
-  }
-  .hero {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url("./images/hero.jpg");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .logo {
-      height: 244px;
-    }
-    h1,
-    p,
-    h2 {
-      margin: 0;
-    }
-    h2 {
-      font-size: 5em;
-      text-transform: uppercase;
-      color: rgba(90, 85, 85, 0.774);
-    }
-    h1 {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 6em;
-      text-transform: uppercase;
-    }
-  }
-  .about {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    .about-info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      img {
-        width: 350px;
-        height: auto;
-        border-radius: 0.5em;
-      }
-      .about-text {
-        h1 {
-          text-transform: uppercase;
-          font-size: 3em;
-        }
-        p {
-          font-family: Quicksand;
-          font-size: 1.5em;
-          text-align: center;
-        }
-      }
-    }
-    .about-company {
-      h1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        background-color: #990021;
-        color: #fff;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        border-radius: 0.4em;
-        span {
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
 
-  .services,
-  .insurance {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .booking {
-      background-color: #990021;
+@media only screen and (min-width: 1024px) {
+  .App {
+    .nav {
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
+      padding: 8px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      .links {
+        width: 100%;
+        .nav-logo {
+          height: 124px;
+        }
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+          font-family: Bebas Neue Regular;
+          color: #111a2f;
+          margin: 8px;
+          font-size: 24px;
+        }
+      }
+    }
+    min-height: 100vh;
+    position: relative;
+    .section {
+      min-height: 100vh;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-around;
       align-items: center;
       padding: 16px;
-      border-radius: 0.3em;
-      margin-top: 16px;
-      h4 {
+      h1,
+      p,
+      h2 {
+        margin: 0;
+      }
+      .title {
+        text-transform: uppercase;
+        h1 {
+          font-size: 12em;
+        }
+        h2 {
+          font-size: 10em;
+          color: #ef233c;
+        }
+      }
+      .about-text {
+        background-color: #ef233c;
+        border-radius: 0.3em;
         color: #fff;
-        text-align: center;
-        width: 80%;
-      }
-      button {
-        align-self: center;
-        color: #990033;
-        background-color: #fff;
-        border: none;
-        font-weight: bold;
-        font-size: 1.2em;
-        padding: 8px;
-        margin: 16px;
-        width: 80%;
-        border-radius: 0.1em;
-      }
-    }
-    .service-icons {
-      display: grid;
-      grid-template-columns: repeat(1, 350px);
-      grid-gap: 24px;
-      .serv-block {
-        border: 4px dashed #c69c6d;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        img {
-          //transform: scale(0.8);
-          width: 350px;
-          height: auto;
-        }
-        span {
-          color: #707070;
-          text-transform: uppercase;
-          font-size: 2.5em;
+        width: 550px;
+        padding: 36px;
+        p {
+          font-size: 2em;
+          font-family: bebas neue;
         }
       }
     }
-    h1 {
-      font-size: 64px;
-    }
-  }
-  .insurance {
-    h1 {
-      color: #707070;
-      text-transform: uppercase;
-    }
-    h3 {
-      font-family: Oxygen;
-      text-transform: uppercase;
-    }
-    .ins-grid {
-      display: grid;
-      grid-template-columns: repeat(1, 350px);
-      grid-template-rows: repeat(1, 1fr);
-      grid-gap: 20px;
-      .ins-block {
-        border: 4px dashed #c69c6d;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 16px;
-        img {
-          height: 150px;
-        }
-        span {
-          //width: 4em;
-          color: #707070;
-          font-size: 20px;
-          font-family: Oxygen;
-          font-weight: bold;
-          text-align: center;
-        }
-      }
-    }
-  }
-  .partners {
-    min-height: 60vh;
-    h1 {
-      color: #707070;
-      text-transform: uppercase;
-      font-size: 64px;
-    }
-  }
-  .contact {
-    div:nth-child(3) {
-      position: relative !important;
-      height: 30% !important;
-    }
-    display: flex;
-    //padding: 64px;
-    flex-direction: column;
-    align-items: center;
-    //height: 100vh;
-    .contact-form {
-      width: 100%;
-
+    .about {
       display: flex;
-      justify-content: center;
       flex-direction: column;
       align-items: center;
+      width: 100%;
+      .about-first,
+      .about-second {
+        width: 80%;
+        justify-content: space-between;
+        padding: 36px;
+        margin-bottom: 96px;
+        .caption-first {
+          align-items: flex-end;
+          text-align: end;
+        }
+        .caption-first,
+        .caption-second {
+          display: flex;
+          flex-direction: column;
+          width: 700px;
+          h2 {
+            font-size: 4em;
+            span {
+              color: #ef233c;
+            }
+          }
+          p {
+            font-size: 1.5em;
+          }
+        }
+        img {
+          height: auto;
+          width: 700px;
+          border-radius: 0.5em;
+        }
+      }
+      .about-first {
+        display: flex;
+      }
+      .about-second {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
 
-      button {
-        border: none;
-        padding: 8px;
-        background-color: #c69c6d;
-        color: #707070;
-        font-weight: bold;
-        margin: 16px;
+    .services,
+    .insurance {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .booking {
+        background-color: #990021;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        border-radius: 0.3em;
+        margin-top: 16px;
+        h4 {
+          color: #fff;
+          text-align: center;
+          width: 80%;
+        }
+        button {
+          align-self: center;
+          color: #990033;
+          background-color: #fff;
+          border: none;
+          font-weight: bold;
+          font-size: 1.2em;
+          padding: 8px;
+          margin: 16px;
+          width: 80%;
+          border-radius: 0.1em;
+        }
+      }
+      .service-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-gap: 24px;
+        .serv-block {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          img {
+            //transform: scale(0.8);
+            width: 350px;
+            height: auto;
+          }
+          span {
+            color: #707070;
+            text-transform: uppercase;
+            font-size: 2.5em;
+          }
+        }
       }
       h1 {
         font-size: 64px;
       }
-      .form-group {
-        display: flex;
-        flex-direction: column;
-        margin: 16px;
-        width: 80vw;
-        input,
-        textarea {
-          padding: 8px;
-          background: none;
-          border: 1px dashed #707070;
-        }
-        textarea {
-          height: 100px;
+    }
+    .insurance {
+      h1 {
+        color: #707070;
+        text-transform: uppercase;
+      }
+      h3 {
+        font-family: Oxygen;
+        text-transform: uppercase;
+      }
+      .ins-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 20px;
+        .ins-block {
+          border: 4px dashed #c69c6d;
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 16px;
+          img {
+            height: 150px;
+          }
+          span {
+            //width: 4em;
+            color: #707070;
+            font-size: 20px;
+            font-family: Oxygen;
+            font-weight: bold;
+            text-align: center;
+          }
         }
       }
-      flex: 1;
     }
-    .contact-info {
-      flex: 1;
+    .partners {
+      min-height: 60vh;
+      h1 {
+        color: #707070;
+        text-transform: uppercase;
+        font-size: 64px;
+      }
+    }
+    .contact {
+      div:nth-child(3) {
+        position: relative !important;
+        height: 30% !important;
+      }
       display: flex;
+      //padding: 64px;
       flex-direction: column;
       align-items: center;
-      button {
-        border: none;
-        padding: 8px;
-        background-color: #c69c6d;
-        color: #707070;
+      //height: 100vh;
+      .contact-form {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+          border: none;
+          padding: 8px;
+          background-color: #c69c6d;
+          color: #707070;
+          font-weight: bold;
+          margin: 16px;
+        }
+        h1 {
+          font-size: 64px;
+        }
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          margin: 16px;
+          width: 80vw;
+          input,
+          textarea {
+            padding: 8px;
+            background: none;
+            border: 1px dashed #707070;
+          }
+          textarea {
+            height: 100px;
+          }
+        }
+        flex: 1;
+      }
+      .contact-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button {
+          border: none;
+          padding: 8px;
+          background-color: #c69c6d;
+          color: #707070;
+        }
       }
     }
   }
 }
-
-.book {
-  border: none;
-  padding: 8px;
-  background-color: #c69c6d;
-  color: #707070;
-}
-
-.partners {
-  .InfiniteCarouselFrame {
-    img {
-      width: 350px;
-      height: auto;
-    }
-    ul {
-      display: flex !important;
-      align-items: center;
-    }
-  }
-}
-
-.footer {
-  background-color: #181818;
-  width: 100%;
-  //height: 2.5rem;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  .social {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  div {
-    margin: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    .logo {
-      height: auto;
-      width: 280px;
-    }
-    p {
-      padding: 8px;
-      width: 300px;
-    }
-    a {
-      svg {
-        padding-right: 8px;
-        color: #707070;
-      }
-    }
-
-    ul {
-      list-style-type: none;
-      padding-inline-start: 0;
-      padding: 8px;
-    }
-    .footer-info {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr) !important;
-      grid-gap: 8px;
-    }
-  }
-}
-
-.gallery {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 24px;
-  .category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h3 {
-      font-size: 4em;
-      text-transform: uppercase;
-    }
-    .image-cat {
-      width: 100%;
-      display: grid;
-      grid-gap: 4px;
-      grid-template-columns: repeat(3, 500px);
-      img {
-        width: 500px;
-        height: auto;
-      }
-    }
-  }
-}
-
 form {
   width: 80%;
   .form-group {
@@ -446,63 +366,4 @@ form {
 }
 
 @media only screen and (min-width: 768px) {
-  .footer {
-    div {
-      flex-direction: row;
-    }
-  }
-  .booking {
-    h4 {
-      width: 50%;
-    }
-    form {
-      .form-group {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-  .nav {
-    .links {
-      flex-direction: row;
-      justify-content: space-evenly;
-      width: 100vw;
-    }
-  }
-  .App {
-    .partners {
-      .InfiniteCarouselFrame {
-        img {
-          width: 300px;
-        }
-      }
-    }
-    .about {
-      padding: 0;
-      .about-info {
-        img {
-          width: 600px;
-        }
-      }
-      .about-company {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        h1 {
-          font-size: 1.8em;
-          width: 400px;
-        }
-      }
-    }
-    .services {
-      .service-icons {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    .insurance {
-      .ins-grid {
-        grid-template-columns: repeat(2, 400px);
-      }
-    }
-  }
 }
