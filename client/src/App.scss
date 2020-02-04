@@ -170,36 +170,23 @@ i {
         flex-direction: row-reverse;
       }
     }
-
-    .services,
-    .insurance {
+    .booking {
+    }
+    .services {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      .booking {
-        background-color: #990021;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 16px;
-        border-radius: 0.3em;
-        margin-top: 16px;
-        h4 {
-          color: #fff;
-          text-align: center;
-          width: 80%;
+      justify-content: center;
+      .services-list {
+        h1 {
+          margin-top: 0;
         }
-        button {
-          align-self: center;
-          color: #990033;
-          background-color: #fff;
-          border: none;
-          font-weight: bold;
-          font-size: 1.2em;
-          padding: 8px;
-          margin: 16px;
-          width: 80%;
-          border-radius: 0.1em;
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          li {
+            font-size: 2.5em;
+            font-family: Bebas Neue;
+            margin-bottom: 4px;
+          }
         }
       }
       .service-icons {
@@ -213,7 +200,7 @@ i {
           align-items: center;
           img {
             //transform: scale(0.8);
-            width: 350px;
+            width: 300px;
             height: auto;
           }
           span {

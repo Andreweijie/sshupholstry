@@ -195,67 +195,34 @@ i {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
-  .App .services,
-  .App .insurance {
+  .App .services {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .App .services .booking,
-  .App .insurance .booking {
-    background-color: #990021;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 16px;
-    border-radius: 0.3em;
-    margin-top: 16px;
+  .App .services .services-list h1 {
+    margin-top: 0;
   }
-  .App .services .booking h4,
-  .App .insurance .booking h4 {
-    color: #fff;
-    text-align: center;
-    width: 80%;
+  .App .services .services-list ul {
+    list-style-type: none;
+    padding-left: 0;
   }
-  .App .services .booking button,
-  .App .insurance .booking button {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    color: #990033;
-    background-color: #fff;
-    border: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 8px;
-    margin: 16px;
-    width: 80%;
-    border-radius: 0.1em;
+  .App .services .services-list ul li {
+    font-size: 2.5em;
+    font-family: Bebas Neue;
+    margin-bottom: 4px;
   }
-  .App .services .service-icons,
-  .App .insurance .service-icons {
+  .App .services .service-icons {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (350px)[3];
         grid-template-columns: repeat(3, 350px);
     grid-gap: 24px;
   }
-  .App .services .service-icons .serv-block,
-  .App .insurance .service-icons .serv-block {
+  .App .services .service-icons .serv-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -270,19 +237,16 @@ i {
         -ms-flex-align: center;
             align-items: center;
   }
-  .App .services .service-icons .serv-block img,
-  .App .insurance .service-icons .serv-block img {
-    width: 350px;
+  .App .services .service-icons .serv-block img {
+    width: 300px;
     height: auto;
   }
-  .App .services .service-icons .serv-block span,
-  .App .insurance .service-icons .serv-block span {
+  .App .services .service-icons .serv-block span {
     color: #707070;
     text-transform: uppercase;
     font-size: 2.5em;
   }
-  .App .services h1,
-  .App .insurance h1 {
+  .App .services h1 {
     font-size: 64px;
   }
   .App .insurance h1 {
