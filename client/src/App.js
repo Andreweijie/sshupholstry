@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import Contact from "./components/Contact";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { message, Switch } from "flwww";
 import {
   faFacebookSquare,
   faWhatsapp,
@@ -124,10 +125,170 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="booking section"></div>
+        <div className="booking section">
+          <div className="booking-header">
+            <h1>Book An Appointment</h1>
+          </div>
+          <div className="form-box">
+            <div className="form-switch">
+              <span>appointment</span>
+              <Switch></Switch>
+              <span>pickup/delivery</span>
+            </div>
+
+            <form>
+              <div className="form-group first-col">
+                <label>Name*</label>
+                <input
+                  required
+                  value={this.state.name}
+                  onChange={this.onChange}
+                  id="name"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group first-col">
+                <label>Mobile No*</label>
+                <input
+                  required
+                  value={this.state.mobile}
+                  onChange={this.onChange}
+                  id="mobile"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group first-col">
+                <label>Email*</label>
+                <input
+                  required
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  id="email"
+                  type="Email"
+                ></input>
+              </div>
+              <div className="form-group first-col">
+                <label>Vehicle No*</label>
+                <input
+                  required
+                  value={this.state.VehicleNo}
+                  onChange={this.onChange}
+                  id="VehicleNo"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group first-col">
+                <label>Vehicle Model*</label>
+                <input
+                  required
+                  value={this.state.vehicleModel}
+                  onChange={this.onChange}
+                  id="vehicleModel"
+                  type="text"
+                ></input>
+              </div>
+              <div className="form-group second-col">
+                <label>Service*</label>
+                <select
+                  required
+                  value={this.state.service}
+                  onChange={this.onChange}
+                  id="service"
+                >
+                  <option value="Arm Rest">Arm Rest</option>
+                  <option value="Carpet">Carpet</option>
+                  <option value="Door Panel">Door Panel</option>
+                  <option value="Dashboard">Dashboard</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Gear Knob">Gear Knob</option>
+                  <option value="Handbrake">Handbrake</option>
+                  <option value="Roof-Lining">Roof-Lining</option>
+                  <option value="Steering Wheel">Steering Wheel</option>
+                  <option value="Sun Visor">Sun Visor</option>
+                  <option value="Soft Convertible Top">
+                    Soft Convertible Top
+                  </option>
+                  <option value="Seats">Seats</option>
+                  <option value="Van Interior Conversion">
+                    Van Interior Conversion
+                  </option>
+                  <option value="Insurance Claim">Insurance Claim</option>
+                  <option value="Van Window Conversion">
+                    Van Window Conversion
+                  </option>
+                  <option value="V-Kool">V-Kool</option>
+                </select>
+              </div>
+              <div className="form-group second-col">
+                <label>Date*</label>
+                <input
+                  required
+                  value={this.state.date}
+                  onChange={this.onChange}
+                  type="date"
+                  id="date"
+                ></input>
+              </div>
+              <div className="form-group second-col">
+                <label>Time*</label>
+                <select
+                  required
+                  value={this.state.time}
+                  onChange={this.onChange}
+                  id="time"
+                >
+                  <option value="9am - 12pm">9am - 12pm</option>
+                  <option value="1pm - 3pm">1pm - 3pm</option>
+                  <option value="4pm - 6pm">4pm - 6pm</option>
+                </select>
+              </div>
+              <div className="form-group full-width">
+                <label>Remarks</label>
+                <textarea
+                  value={this.state.remarks}
+                  onChange={this.onChange}
+                  id="remarks"
+                ></textarea>
+              </div>
+              <button>Submit</button>
+            </form>
+          </div>
+        </div>
 
         <div className="partners section">
           <h1 style={{ textAlign: "center" }}>Insurance Partners</h1>
+          <div>
+            <div>
+              <img alt="" src="https://i.imgur.com/o8ktxb7.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/A4FUfBl.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/HhobUPl.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/toRzEki.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/5At9TWy.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/bbIiTub.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/N292kqL.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/R2ZGgrQ.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/jSFgrVc.png" />
+            </div>
+            <div>
+              <img alt="" src="https://i.imgur.com/LY6dFVh.png" />
+            </div>
+          </div>
         </div>
         <div className="footer"></div>
       </div>

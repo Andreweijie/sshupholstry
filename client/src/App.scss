@@ -93,6 +93,7 @@ i {
     position: relative;
     .section {
       min-height: 100vh;
+      margin-bottom: 7em;
     }
     .hero {
       display: flex;
@@ -171,6 +172,81 @@ i {
       }
     }
     .booking {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form-box {
+        background-color: #fff;
+        width: 50%;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 1000px;
+        .form-switch {
+          width: 40%;
+          display: flex;
+          justify-content: space-evenly;
+          span {
+            font-size: 1.3em;
+            text-transform: capitalize;
+          }
+          .Switch_slider__oNE9r {
+            background-color: #ef233c !important;
+          }
+        }
+        form {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          button {
+            margin: 16px;
+          }
+          .full-width {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+          .form-group {
+            display: flex;
+            flex-direction: column;
+            margin: 16px;
+            input,
+            textarea,
+            select {
+              padding: 8px;
+              background-color: #edf2f4;
+            }
+            textarea {
+              height: 100px;
+              border: none;
+            }
+            label {
+              color: #111a2f;
+              font-family: Bebas Neue;
+              font-size: 1.3em;
+            }
+          }
+        }
+      }
+      .booking-header {
+        z-index: 2;
+        background-color: #ef233c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        border-radius: 0.5em;
+        padding: 2em;
+        box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3); //#d90429;
+        h1 {
+          font-family: Bebas Neue;
+          text-transform: uppercase;
+          color: #f4f9fb;
+          font-size: 3.5em;
+          text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+        }
+      }
     }
     .services {
       display: flex;
@@ -192,7 +268,7 @@ i {
       .service-icons {
         display: grid;
         grid-template-columns: repeat(3, 350px);
-        grid-gap: 24px;
+
         .serv-block {
           display: flex;
           flex-direction: column;
@@ -287,21 +363,7 @@ i {
         h1 {
           font-size: 64px;
         }
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          margin: 16px;
-          width: 80vw;
-          input,
-          textarea {
-            padding: 8px;
-            background: none;
-            border: 1px dashed #707070;
-          }
-          textarea {
-            height: 100px;
-          }
-        }
+
         flex: 1;
       }
       .contact-info {
@@ -320,7 +382,6 @@ i {
   }
 }
 form {
-  width: 80%;
   .form-group {
     display: flex;
     padding: 4px;

@@ -77,6 +77,7 @@ i {
   }
   .App .section {
     min-height: 100vh;
+    margin-bottom: 7em;
   }
   .App .hero {
     display: -webkit-box;
@@ -195,6 +196,118 @@ i {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .App .booking {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .booking .form-box {
+    background-color: #fff;
+    width: 50%;
+    padding: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 1000px;
+  }
+  .App .booking .form-box .form-switch {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .App .booking .form-box .form-switch span {
+    font-size: 1.3em;
+    text-transform: capitalize;
+  }
+  .App .booking .form-box .form-switch .Switch_slider__oNE9r {
+    background-color: #ef233c !important;
+  }
+  .App .booking .form-box form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .App .booking .form-box form button {
+    margin: 16px;
+  }
+  .App .booking .form-box form .full-width {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .App .booking .form-box form .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 16px;
+  }
+  .App .booking .form-box form .form-group input,
+  .App .booking .form-box form .form-group textarea,
+  .App .booking .form-box form .form-group select {
+    padding: 8px;
+    background-color: #edf2f4;
+  }
+  .App .booking .form-box form .form-group textarea {
+    height: 100px;
+    border: none;
+  }
+  .App .booking .form-box form .form-group label {
+    color: #111a2f;
+    font-family: Bebas Neue;
+    font-size: 1.3em;
+  }
+  .App .booking .booking-header {
+    z-index: 2;
+    background-color: #ef233c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 60%;
+    border-radius: 0.5em;
+    padding: 2em;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+  }
+  .App .booking .booking-header h1 {
+    font-family: Bebas Neue;
+    text-transform: uppercase;
+    color: #f4f9fb;
+    font-size: 3.5em;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
   .App .services {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -220,7 +333,6 @@ i {
     display: grid;
     -ms-grid-columns: (350px)[3];
         grid-template-columns: repeat(3, 350px);
-    grid-gap: 24px;
   }
   .App .services .service-icons .serv-block {
     display: -webkit-box;
@@ -348,26 +460,6 @@ i {
   .App .contact .contact-form h1 {
     font-size: 64px;
   }
-  .App .contact .contact-form .form-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 16px;
-    width: 80vw;
-  }
-  .App .contact .contact-form .form-group input,
-  .App .contact .contact-form .form-group textarea {
-    padding: 8px;
-    background: none;
-    border: 1px dashed #707070;
-  }
-  .App .contact .contact-form .form-group textarea {
-    height: 100px;
-  }
   .App .contact .contact-info {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -389,10 +481,6 @@ i {
     background-color: #c69c6d;
     color: #707070;
   }
-}
-
-form {
-  width: 80%;
 }
 
 form .form-group {
