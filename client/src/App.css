@@ -107,6 +107,8 @@ i {
   }
   .App .hero .about-text {
     background-color: #ef233c;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
     border-radius: 0.3em;
     color: #fff;
     width: 550px;
@@ -410,9 +412,19 @@ i {
     min-height: 60vh;
   }
   .App .partners h1 {
-    color: #707070;
     text-transform: uppercase;
     font-size: 64px;
+  }
+  .App .partners div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-gap: 16px;
+  }
+  .App .partners div div img {
+    height: auto;
+    width: 300px;
   }
   .App .contact {
     display: -webkit-box;

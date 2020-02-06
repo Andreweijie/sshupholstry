@@ -290,7 +290,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="footer"></div>
+        <div className="find section"></div>
+        <div className="footer">|privacy policy</div>
       </div>
     );
   }
