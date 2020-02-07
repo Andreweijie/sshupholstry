@@ -24,7 +24,25 @@ class App extends Component {
     vehicleModel: "",
     date: "",
     time: "",
-    loading: "Book Now"
+    loading: "Book Now",
+    days: [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday"
+    ],
+    hours: [
+      "CLOSED",
+      "09:00 - 18:00",
+      "09:00 - 18:00",
+      "09:00 - 18:00",
+      "09:00 - 18:00",
+      "09:00 - 18:00",
+      "09:00 - 17:00"
+    ]
   };
   render() {
     return (
@@ -250,7 +268,7 @@ class App extends Component {
                   id="remarks"
                 ></textarea>
               </div>
-              <button>Submit</button>
+              <button className="full-width">Submit</button>
             </form>
           </div>
         </div>
@@ -290,7 +308,51 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="find section"></div>
+        <div className="find section">
+          <div className="contact-info">
+            <div className="info-block">
+              <h1>PHONE</h1>
+              <h2>64548160</h2>
+              <h2>64548179</h2>
+            </div>
+            <div className="info-block">
+              <h1>EMAIL</h1>
+              <h2>sinhockhengcm@singnet.com </h2>
+            </div>
+            <div className="info-block">
+              <h1>LOCATION</h1>
+              <h2>
+                7 Sin Ming Industrial Estate Sector C, #01-90, Singapore 575642
+              </h2>
+            </div>
+            <div className="info-block">
+              <h1>OPENING HOURS</h1>
+              <div className="opening">
+                <ul>
+                  {this.state.days.map((day, index) => {
+                    if (index == new Date().getDay()) {
+                      return <li style={{ color: "#ef233c" }}>{day}</li>;
+                    } else {
+                      return <li>{day}</li>;
+                    }
+                  })}
+                </ul>
+                <ul>
+                  {this.state.hours.map((day, index) => {
+                    if (index == new Date().getDay()) {
+                      return <li style={{ color: "#ef233c" }}>{day}</li>;
+                    } else {
+                      return <li>{day}</li>;
+                    }
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="maps">
+            <img src={require("./images/sssss.png")}></img>
+          </div>
+        </div>
         <div className="footer">|privacy policy</div>
       </div>
     );

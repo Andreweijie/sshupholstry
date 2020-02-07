@@ -202,7 +202,13 @@ i {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           button {
-            margin: 16px;
+            border: none;
+            background-color: #ef233c;
+            color: white;
+            font-weight: bold;
+            padding: 16px;
+            font-size: 24px;
+            border-radius: 0.3em;
           }
           .full-width {
             grid-column-start: 1;
@@ -291,42 +297,6 @@ i {
         font-size: 64px;
       }
     }
-    .insurance {
-      h1 {
-        color: #707070;
-        text-transform: uppercase;
-      }
-      h3 {
-        font-family: Oxygen;
-        text-transform: uppercase;
-      }
-      .ins-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 350px);
-        grid-template-rows: repeat(1, 1fr);
-        grid-gap: 20px;
-        .ins-block {
-          border: 4px dashed #c69c6d;
-          height: 200px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 16px;
-          img {
-            height: 150px;
-          }
-          span {
-            //width: 4em;
-            color: #707070;
-            font-size: 20px;
-            font-family: Oxygen;
-            font-weight: bold;
-            text-align: center;
-          }
-        }
-      }
-    }
     .partners {
       min-height: 60vh;
       h1 {
@@ -342,6 +312,39 @@ i {
             height: auto;
             width: 300px;
           }
+        }
+      }
+    }
+    .find {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .contact-info {
+        .info-block {
+          h2 {
+            font-family: Bebas Neue;
+            font-size: 1.5em;
+          }
+          .opening {
+            display: flex;
+            justify-content: space-between;
+            ul {
+              padding-inline-start: 0;
+
+              list-style-type: none;
+              li {
+                text-transform: uppercase;
+                margin: 8px;
+                font-size: 1.5em;
+              }
+            }
+          }
+        }
+      }
+      .maps {
+        img {
+          border-radius: 0.3em;
+          box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
         }
       }
     }
