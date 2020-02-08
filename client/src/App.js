@@ -3,18 +3,15 @@ import "./App.css";
 import Images from "./components/Images";
 import Landing from "./components/Landing";
 import Contact from "./components/Contact";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { message, Switch } from "flwww";
 import {
   faFacebookSquare,
   faWhatsapp,
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
-import { Route, Link } from "react-router-dom";
 import Nav from "./components/Nav";
 
-library.add(faFacebookSquare, faWhatsapp, faInstagram);
 class App extends Component {
   state = {
     name: "",
@@ -317,7 +314,7 @@ class App extends Component {
             </div>
             <div className="info-block">
               <h1>EMAIL</h1>
-              <h2>sinhockhengcm@singnet.com </h2>
+              <h2>info@shhupholstery.com</h2>
             </div>
             <div className="info-block">
               <h1>LOCATION</h1>
