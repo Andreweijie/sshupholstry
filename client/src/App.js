@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
-import Images from "./components/Images";
-import Landing from "./components/Landing";
-import Contact from "./components/Contact";
-import { library } from "";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { message, Switch } from "flwww";
 import {
   faFacebookSquare,
   faWhatsapp,
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Nav from "./components/Nav";
 
+library.add(faFacebookSquare, faInstagram, faWhatsapp);
 class App extends Component {
   state = {
     name: "",
@@ -350,7 +349,17 @@ class App extends Component {
             <img src={require("./images/sssss.png")}></img>
           </div>
         </div>
-        <div className="footer">|privacy policy</div>
+        <div className="footer">
+          <div className="social">
+            <FontAwesomeIcon size="2x" icon={faWhatsapp}></FontAwesomeIcon>
+            <FontAwesomeIcon size="2x" icon={faInstagram}></FontAwesomeIcon>
+            <FontAwesomeIcon
+              size="2x"
+              icon={faFacebookSquare}
+            ></FontAwesomeIcon>
+          </div>
+          privacy policy
+        </div>
       </div>
     );
   }

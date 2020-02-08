@@ -308,6 +308,8 @@ i {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 16px;
         div {
+          display: flex;
+          justify-content: center;
           img {
             height: 300px;
             width: auto;
@@ -350,7 +352,17 @@ i {
     }
   }
   .footer {
+    color: #edf2f4;
     background-color: #8d99ae;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .social {
+      svg {
+        margin: 16px;
+      }
+    }
   }
 }
 form {
