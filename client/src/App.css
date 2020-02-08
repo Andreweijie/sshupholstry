@@ -384,8 +384,8 @@ i {
     grid-gap: 16px;
   }
   .App .partners div div img {
-    height: auto;
-    width: 300px;
+    height: 300px;
+    width: auto;
   }
   .App .find {
     display: -webkit-box;
@@ -424,72 +424,8 @@ i {
     -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
             box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
   }
-  .App .contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .App .contact div:nth-child(3) {
-    position: relative !important;
-    height: 30% !important;
-  }
-  .App .contact .contact-form {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .App .contact .contact-form button {
-    border: none;
-    padding: 8px;
-    background-color: #c69c6d;
-    color: #707070;
-    font-weight: bold;
-    margin: 16px;
-  }
-  .App .contact .contact-form h1 {
-    font-size: 64px;
-  }
-  .App .contact .contact-info {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .App .contact .contact-info button {
-    border: none;
-    padding: 8px;
-    background-color: #c69c6d;
-    color: #707070;
+  .footer {
+    background-color: #8d99ae;
   }
 }
 

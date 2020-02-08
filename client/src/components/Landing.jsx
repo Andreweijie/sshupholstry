@@ -291,34 +291,34 @@ export default class Landing extends Component {
             scrollOnDevice={true}
           >
             <div>
-              <img alt="" src="https://i.imgur.com/o8ktxb7.png" />
+              <img alt="" src={require("../images/ins/great.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/A4FUfBl.png" />
+              <img alt="" src={require("../images/ins/ntuc.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/HhobUPl.png" />
+              <img alt="" src={require("../images/ins/taiping.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/toRzEki.png" />
+              <img alt="" src={require("../images/ins/aviva.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/5At9TWy.png" />
+              <img alt="" src={require("../images/ins/aig.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/bbIiTub.png" />
+              <img alt="" src={require("../images/ins/ergo.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/N292kqL.png" />
+              <img alt="" src={require("../images/ins/etiqa.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/R2ZGgrQ.png" />
+              <img alt="" src={require("../images/ins/hsbc.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/jSFgrVc.png" />
+              <img alt="" src={require("../images/ins/tokio.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/LY6dFVh.png" />
+              <img alt="" src={require("../images/ins/msig.png")} />
             </div>
           </InfiniteCarousel>
         </div>

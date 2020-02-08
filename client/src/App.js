@@ -3,7 +3,7 @@ import "./App.css";
 import Images from "./components/Images";
 import Landing from "./components/Landing";
 import Contact from "./components/Contact";
-
+import { library } from "";
 import { message, Switch } from "flwww";
 import {
   faFacebookSquare,
@@ -271,37 +271,37 @@ class App extends Component {
         </div>
 
         <div className="partners section">
-          <h1 style={{ textAlign: "center" }}>Insurance Partners</h1>
+          <h1 style={{ textAlign: "center" }}>Insurance Claims</h1>
           <div>
             <div>
-              <img alt="" src="https://i.imgur.com/o8ktxb7.png" />
+              <img alt="" src={require("./images/ins/great.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/A4FUfBl.png" />
+              <img alt="" src={require("./images/ins/ntuc.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/HhobUPl.png" />
+              <img alt="" src={require("./images/ins/taiping.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/toRzEki.png" />
+              <img alt="" src={require("./images/ins/aviva.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/5At9TWy.png" />
+              <img alt="" src={require("./images/ins/aig.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/bbIiTub.png" />
+              <img alt="" src={require("./images/ins/ergo.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/N292kqL.png" />
+              <img alt="" src={require("./images/ins/etiqa.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/R2ZGgrQ.png" />
+              <img alt="" src={require("./images/ins/hsbc.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/jSFgrVc.png" />
+              <img alt="" src={require("./images/ins/tokio.png")} />
             </div>
             <div>
-              <img alt="" src="https://i.imgur.com/LY6dFVh.png" />
+              <img alt="" src={require("./images/ins/msig.png")} />
             </div>
           </div>
         </div>
