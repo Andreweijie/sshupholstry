@@ -35,7 +35,7 @@ i {
   border-color: #c69c6d !important;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1300px) {
   .App {
     min-height: 100vh;
     position: relative;
@@ -227,9 +227,9 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     height: 1000px;
   }
   .App .booking .form-box .form-switch {
@@ -240,6 +240,7 @@ i {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    margin-top: 48px;
   }
   .App .booking .form-box .form-switch span {
     font-size: 1.3em;
@@ -435,6 +436,882 @@ i {
     border-radius: 0.3em;
     -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
             box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .footer {
+    color: #edf2f4;
+    background-color: #8d99ae;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+    font-family: Bebas Neue;
+  }
+  .footer .social svg {
+    margin: 16px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1299px) {
+  .App {
+    min-height: 100vh;
+    position: relative;
+  }
+  .App .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .App .nav .links {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .nav .links .nav-logo {
+    height: 124px;
+  }
+  .App .nav .links a {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Bebas Neue Regular;
+    color: #111a2f;
+    margin: 8px;
+    font-size: 24px;
+  }
+  .App .section {
+    min-height: 100vh;
+    margin-bottom: 7em;
+  }
+  .App .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+  }
+  .App .hero h1,
+  .App .hero p,
+  .App .hero h2 {
+    margin: 0;
+  }
+  .App .hero .title {
+    text-transform: uppercase;
+  }
+  .App .hero .title h1 {
+    font-size: 10em;
+  }
+  .App .hero .title h2 {
+    font-size: 8em;
+    color: #ef233c;
+  }
+  .App .hero .about-text {
+    background-color: #ef233c;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+    border-radius: 0.3em;
+    color: #fff;
+    width: 450px;
+    padding: 36px;
+  }
+  .App .hero .about-text p {
+    font-size: 1.5em;
+    font-family: Bebas Neue;
+  }
+  .App .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .App .about .about-first,
+  .App .about .about-second {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 36px;
+    margin-bottom: 96px;
+  }
+  .App .about .about-first .caption-first,
+  .App .about .about-second .caption-first {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+  .App .about .about-first .caption-first,
+  .App .about .about-first .caption-second,
+  .App .about .about-second .caption-first,
+  .App .about .about-second .caption-second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 500px;
+  }
+  .App .about .about-first .caption-first h2,
+  .App .about .about-first .caption-second h2,
+  .App .about .about-second .caption-first h2,
+  .App .about .about-second .caption-second h2 {
+    font-size: 3em;
+  }
+  .App .about .about-first .caption-first h2 span,
+  .App .about .about-first .caption-second h2 span,
+  .App .about .about-second .caption-first h2 span,
+  .App .about .about-second .caption-second h2 span {
+    color: #ef233c;
+  }
+  .App .about .about-first .caption-first p,
+  .App .about .about-first .caption-second p,
+  .App .about .about-second .caption-first p,
+  .App .about .about-second .caption-second p {
+    width: 400px;
+    font-size: 1.7em;
+    font-family: Bebas Neue;
+  }
+  .App .about .about-first img,
+  .App .about .about-second img {
+    height: 300px;
+    width: auto;
+    border-radius: 0.5em;
+  }
+  .App .about .about-first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .App .about .about-second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .App .booking {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .booking .form-box {
+    background-color: #fff;
+    width: 80%;
+    padding: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 1000px;
+  }
+  .App .booking .form-box .form-switch {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 48px;
+  }
+  .App .booking .form-box .form-switch span {
+    font-size: 1.3em;
+    text-transform: capitalize;
+  }
+  .App .booking .form-box .form-switch .Switch_slider__oNE9r {
+    background-color: #ef233c !important;
+  }
+  .App .booking .form-box form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .App .booking .form-box form button {
+    border: none;
+    background-color: #ef233c;
+    color: white;
+    font-weight: bold;
+    padding: 16px;
+    font-size: 24px;
+    border-radius: 0.3em;
+  }
+  .App .booking .form-box form .full-width {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .App .booking .form-box form .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 16px;
+  }
+  .App .booking .form-box form .form-group input,
+  .App .booking .form-box form .form-group textarea,
+  .App .booking .form-box form .form-group select {
+    padding: 8px;
+    background-color: #edf2f4;
+  }
+  .App .booking .form-box form .form-group textarea {
+    height: 100px;
+    border: none;
+  }
+  .App .booking .form-box form .form-group label {
+    color: #111a2f;
+    font-family: Bebas Neue;
+    font-size: 1.3em;
+  }
+  .App .booking .booking-header {
+    z-index: 2;
+    background-color: #ef233c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 85%;
+    border-radius: 0.5em;
+    padding: 2em;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+  }
+  .App .booking .booking-header h1 {
+    font-family: Bebas Neue;
+    text-transform: uppercase;
+    color: #f4f9fb;
+    font-size: 3.5em;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+  .App .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 16px;
+  }
+  .App .services .services-list h1 {
+    margin-top: 0;
+  }
+  .App .services .services-list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .App .services .services-list ul li {
+    font-size: 2em;
+    font-family: Bebas Neue;
+    margin-bottom: 4px;
+  }
+  .App .services .service-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (300px)[3];
+        grid-template-columns: repeat(3, 300px);
+    -ms-grid-rows: (280px)[3];
+        grid-template-rows: repeat(3, 280px);
+  }
+  .App .services .service-icons .serv-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .services .service-icons .serv-block img {
+    width: 250px;
+    height: auto;
+  }
+  .App .services .service-icons .serv-block span {
+    color: #707070;
+    text-transform: uppercase;
+    font-size: 2.5em;
+  }
+  .App .services h1 {
+    font-size: 48px;
+  }
+  .App .partners {
+    min-height: 60vh;
+  }
+  .App .partners h1 {
+    text-transform: uppercase;
+    font-size: 64px;
+  }
+  .App .partners div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+  }
+  .App .partners div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .App .partners div div img {
+    height: 300px;
+    width: auto;
+  }
+  .App .find {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .find .contact-info .info-block h2,
+  .App .find .contact-info .info-block a {
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+    color: #111a2f;
+  }
+  .App .find .contact-info .info-block .opening {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .App .find .contact-info .info-block .opening ul {
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    list-style-type: none;
+  }
+  .App .find .contact-info .info-block .opening ul li {
+    text-transform: uppercase;
+    margin: 8px;
+    font-size: 1.5em;
+  }
+  .App .find .maps img {
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
+    width: 500px;
+  }
+  .footer {
+    color: #edf2f4;
+    background-color: #8d99ae;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+    font-family: Bebas Neue;
+  }
+  .footer .social svg {
+    margin: 16px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .App {
+    min-height: 100vh;
+    position: relative;
+  }
+  .App .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 8px;
+    top: 0;
+    width: 100%;
+  }
+  .App .nav .links {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .nav .links .nav-logo {
+    height: 124px;
+  }
+  .App .nav .links a {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Bebas Neue Regular;
+    color: #111a2f;
+    margin: 8px;
+    font-size: 24px;
+  }
+  .App .section {
+    min-height: 100vh;
+    margin-bottom: 7em;
+  }
+  .App .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+  }
+  .App .hero h1,
+  .App .hero p,
+  .App .hero h2 {
+    margin: 0;
+  }
+  .App .hero .title {
+    text-transform: uppercase;
+  }
+  .App .hero .title h1 {
+    font-size: 5em;
+  }
+  .App .hero .title h2 {
+    font-size: 4em;
+    color: #ef233c;
+  }
+  .App .hero .about-text {
+    background-color: #ef233c;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+    border-radius: 0.3em;
+    color: #fff;
+    width: 350px;
+    padding: 36px;
+  }
+  .App .hero .about-text p {
+    font-size: 1.3em;
+    font-family: Bebas Neue;
+  }
+  .App .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .App .about .about-first,
+  .App .about .about-second {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 36px;
+    margin-bottom: 96px;
+  }
+  .App .about .about-first .caption-first,
+  .App .about .about-second .caption-first {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: start;
+  }
+  .App .about .about-first .caption-first,
+  .App .about .about-first .caption-second,
+  .App .about .about-second .caption-first,
+  .App .about .about-second .caption-second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 350px;
+  }
+  .App .about .about-first .caption-first h2,
+  .App .about .about-first .caption-second h2,
+  .App .about .about-second .caption-first h2,
+  .App .about .about-second .caption-second h2 {
+    font-size: 3em;
+  }
+  .App .about .about-first .caption-first h2 span,
+  .App .about .about-first .caption-second h2 span,
+  .App .about .about-second .caption-first h2 span,
+  .App .about .about-second .caption-second h2 span {
+    color: #ef233c;
+  }
+  .App .about .about-first .caption-first p,
+  .App .about .about-first .caption-second p,
+  .App .about .about-second .caption-first p,
+  .App .about .about-second .caption-second p {
+    width: 350px;
+    font-size: 1.7em;
+    font-family: Bebas Neue;
+  }
+  .App .about .about-first img,
+  .App .about .about-second img {
+    height: 200px;
+    width: auto;
+    border-radius: 0.5em;
+  }
+  .App .booking {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .booking .form-box {
+    background-color: #fff;
+    width: 80%;
+    padding: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 1000px;
+  }
+  .App .booking .form-box .form-switch {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 48px;
+  }
+  .App .booking .form-box .form-switch span {
+    font-size: 1.3em;
+    text-transform: capitalize;
+  }
+  .App .booking .form-box .form-switch .Switch_slider__oNE9r {
+    background-color: #ef233c !important;
+  }
+  .App .booking .form-box form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .App .booking .form-box form button {
+    border: none;
+    background-color: #ef233c;
+    color: white;
+    font-weight: bold;
+    padding: 16px;
+    font-size: 24px;
+    border-radius: 0.3em;
+  }
+  .App .booking .form-box form .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 16px;
+  }
+  .App .booking .form-box form .form-group input,
+  .App .booking .form-box form .form-group textarea,
+  .App .booking .form-box form .form-group select {
+    padding: 8px;
+    background-color: #edf2f4;
+  }
+  .App .booking .form-box form .form-group textarea {
+    height: 100px;
+    border: none;
+  }
+  .App .booking .form-box form .form-group label {
+    color: #111a2f;
+    font-family: Bebas Neue;
+    font-size: 1.3em;
+  }
+  .App .booking .booking-header {
+    z-index: 2;
+    background-color: #ef233c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 85%;
+    border-radius: 0.5em;
+    padding: 2em;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
+  }
+  .App .booking .booking-header h1 {
+    font-family: Bebas Neue;
+    text-transform: uppercase;
+    color: #f4f9fb;
+    font-size: 3.5em;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+  .App .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+  }
+  .App .services .services-list h1 {
+    margin-top: 0;
+  }
+  .App .services .services-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .App .services .services-list ul li {
+    font-size: 2em;
+    font-family: Bebas Neue;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  .App .services .service-icons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (300px)[1];
+        grid-template-columns: repeat(1, 300px);
+    -ms-grid-rows: (300px)[9];
+        grid-template-rows: repeat(9, 300px);
+  }
+  .App .services .service-icons .serv-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .services .service-icons .serv-block img {
+    width: 300px;
+    height: auto;
+  }
+  .App .services .service-icons .serv-block span {
+    color: #707070;
+    text-transform: uppercase;
+    font-size: 2.5em;
+  }
+  .App .services h1 {
+    font-size: 48px;
+  }
+  .App .partners {
+    min-height: 60vh;
+  }
+  .App .partners h1 {
+    text-transform: uppercase;
+    font-size: 64px;
+  }
+  .App .partners div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+  }
+  .App .partners div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .App .partners div div img {
+    height: 300px;
+    width: auto;
+  }
+  .App .find {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px;
+  }
+  .App .find .contact-info .info-block h2,
+  .App .find .contact-info .info-block a {
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+    color: #111a2f;
+  }
+  .App .find .contact-info .info-block .opening {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .App .find .contact-info .info-block .opening ul {
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    list-style-type: none;
+  }
+  .App .find .contact-info .info-block .opening ul li {
+    text-transform: uppercase;
+    margin: 8px;
+    font-size: 1.5em;
+  }
+  .App .find .maps img {
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(0, 0, 0, 0.3);
+    width: 350px;
   }
   .footer {
     color: #edf2f4;

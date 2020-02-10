@@ -107,9 +107,9 @@ class App extends Component {
               <li>ROOF-LINING</li>
               <li>STEERING WHEEL</li>
               <li>SUN VISOR</li>
-              <li>SOFT CONVERTIBLE TOP</li>
-              <li>SEATS</li>
               <li>VAN INTERIOR</li>
+              <li>SEATS</li>
+              <li>SOFT CONVERTIBLE TOP</li>
               <li>WINDSCREEN & CLAIMS</li>
             </ul>
           </div>
