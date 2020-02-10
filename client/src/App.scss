@@ -124,7 +124,7 @@ i {
         padding: 36px;
         p {
           font-size: 2em;
-          font-family: bebas neue;
+          font-family: Bebas Neue;
         }
       }
     }
@@ -155,7 +155,9 @@ i {
             }
           }
           p {
-            font-size: 1.5em;
+            width: 600px;
+            font-size: 1.7em;
+            font-family: Bebas Neue;
           }
         }
         img {
@@ -323,9 +325,11 @@ i {
       align-items: center;
       .contact-info {
         .info-block {
-          h2 {
+          h2,
+          a {
             font-family: Bebas Neue;
             font-size: 1.5em;
+            color: #111a2f;
           }
           .opening {
             display: flex;
@@ -358,6 +362,8 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 16px;
+    font-family: Bebas Neue;
     .social {
       svg {
         margin: 16px;

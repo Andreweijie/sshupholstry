@@ -116,7 +116,7 @@ i {
   }
   .App .hero .about-text p {
     font-size: 2em;
-    font-family: bebas neue;
+    font-family: Bebas Neue;
   }
   .App .about {
     display: -webkit-box;
@@ -176,7 +176,9 @@ i {
   .App .about .about-first .caption-second p,
   .App .about .about-second .caption-first p,
   .App .about .about-second .caption-second p {
-    font-size: 1.5em;
+    width: 600px;
+    font-size: 1.7em;
+    font-family: Bebas Neue;
   }
   .App .about .about-first img,
   .App .about .about-second img {
@@ -405,9 +407,11 @@ i {
         -ms-flex-align: center;
             align-items: center;
   }
-  .App .find .contact-info .info-block h2 {
+  .App .find .contact-info .info-block h2,
+  .App .find .contact-info .info-block a {
     font-family: Bebas Neue;
     font-size: 1.5em;
+    color: #111a2f;
   }
   .App .find .contact-info .info-block .opening {
     display: -webkit-box;
@@ -448,6 +452,8 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 16px;
+    font-family: Bebas Neue;
   }
   .footer .social svg {
     margin: 16px;
