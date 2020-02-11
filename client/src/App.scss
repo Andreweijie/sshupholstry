@@ -372,7 +372,7 @@ i {
     }
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1299px) {
+@media only screen and (min-width: 669px) and (max-width: 1299px) {
   .App {
     .nav {
       display: flex;
@@ -810,9 +810,8 @@ i {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 1000px;
         .form-switch {
-          width: 40%;
+          width: 100%;
           display: flex;
           justify-content: space-evenly;
           margin-top: 48px;
@@ -869,6 +868,7 @@ i {
         padding: 2em;
         box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3); //#d90429;
         h1 {
+          text-align: center;
           font-family: Bebas Neue;
           text-transform: uppercase;
           color: #f4f9fb;
@@ -934,7 +934,7 @@ i {
       div {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 16px;
+
         div {
           display: flex;
           justify-content: center;

@@ -1,90 +1,79 @@
-const functions = require("firebase-functions");
-const nodemailer = require("nodemailer");
 const express = require("express");
-const cors = require("cors");
-const app = express();
-const bodyParser = require("body-parser");
 
-app.use(cors({ origin: true }));
+const app = express();
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+app.use(cors());
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: false
   })
 );
-let transporter = nodemailer.createTransport({
-  host: "mail.spiceoflife.sg",
+
+const transporter = nodemailer.createTransport({
+  host: "web204.vodien.com",
   port: 465,
   secure: true,
   auth: {
-    user: "reservations@spiceoflife.sg",
-    pass: "o{!VC1{(]KmT"
+    user: "info@shhupholstery.com",
+    pass: "$1K?={8(YMte"
   }
 });
 
-app.post("/sendConfirmationMail", (req, res) => {
-  // getting dest email by query string
-  const dest = "reservations@spiceoflife.sg";
-  let date = new Date(req.body.date * 1000).toLocaleString("en-US", {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric"
-  });
+app.post("/appointment", (req, res) => {
   const mailOptions = {
-    from: "CM-PB Team<reservations@spiceoflife.sg>", // Something like: Jane Doe <janedoe@gmail.com>
-    to: dest,
-    subject: "Reservation Confirmed", // email subject
-    html: `<p style="font-size: 16px;">Dear ${req.body.name},</p>
-                <br />
-               <p>Your reservation has been confirmed. Details of your reservation:</p>
-               <br />
-               <p>Name : ${req.body.name}</p>
-               <p>Date: ${date}</p>
-               <p>Time: ${req.body.time}</p>
-               <p>Pax: ${req.body.pax}</p>
-               <p>Seat Preference: ${req.body.seatPref}</p>
-            ` // email content in HTML
+    from: "Sin Hock Heng<info@shhupholstery.com>",
+    to: "andregoh1996@gmail.com",
+    subject: `New Appointment`,
+    html: `<h2>Name: ${req.body.name}</h2><h2>Email: ${req.body.email}</h2><h2>Mobile Number: ${req.body.mobile}</h2><h2>Vehicle Number: ${req.body.vehicleNo}</h2><h2>Vehicle Model: ${req.body.vehicleModel}</h2><h2>Service: ${req.body.service}</h2><h2>Date: ${req.body.date}</h2><h2>Time: ${req.body.time}</h2><h2>Remarks: ${req.body.remarks}</h2>`
   };
-
-  // returning result
-  return transporter.sendMail(mailOptions, (erro, info) => {
-    if (erro) {
-      return res.json({ message: false });
-    }
-    return res.json({ message: true });
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) console.log(err);
+    else console.log("sent");
   });
+  res.json({ message: "sent" });
 });
 
-app.post("/sendReservationMail", (req, res) => {
-  // getting dest email by query string
-  const dest = "reservations@spiceoflife.sg";
-
+app.post("/delivery", (req, res) => {
   const mailOptions = {
-    from: "reservations@spiceoflife.sg", // Something like: Jane Doe <janedoe@gmail.com>
-    to: dest,
-    subject: "CM-PB New Reservation", // email subject
-    html: `<p style="font-size: 16px;">New Reservation</p>
-                <br />
-                <h3>Name: ${req.body.name}</h3>
-                <h3>Date: ${req.body.date}</h3>
-                <h3>Time: ${req.body.time}</h3>
-                <h3>Seat Preference: ${req.body.seatPref}</h3>
-                <h3>Pax: ${req.body.pax}</h3>
-                <h3>Contact Preference: ${req.body.contactPref}</h3>
-                <h3>Remarks: ${req.body.remarks}</h3>
-                <h3>Email: ${req.body.email}</h3>
-                <h3>Mobile: ${req.body.mobile}</h3>
-                <h3>Created on: ${req.body.createdAt}</h3>
-            ` // email content in HTML
+    from: "Sin Hock Heng<info@shhupholstery.com>",
+    to: "andregoh1996@gmail.com",
+    subject: `Delivery Enquiry`,
+    html: `<h2>Name: ${req.body.name}</h2><h2>Email: ${req.body.email}</h2><h2>Mobile Number: ${req.body.mobile}</h2>`
   };
-
-  // returning result
-  return transporter.sendMail(mailOptions, (erro, info) => {
-    if (erro) {
-      return res.json({ message: false });
-    }
-    return res.json({ message: true });
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) console.log(err);
+    else console.log("sent");
   });
+  res.json({ message: "sent" });
 });
 
-exports.widgets = functions.https.onRequest(app);
+/*const Email = require("email-templates");
+
+const email = new Email({
+  message: {
+    from: "niftylettuce@gmail.com"
+  },
+  // uncomment below to send emails in development/test env:
+  send: true,
+  transport: transporter
+});
+
+email
+  .send({
+    template: "mars",
+    message: {
+      to: "andreweijie@outlook.com"
+    },
+    locals: {
+      name: "Elon"
+    }
+  })
+  .then(console.log)
+  .catch(console.error); */
+
+const port = 5000;
+
+app.listen(port, () => console.log(`Server running on port ${port}`));

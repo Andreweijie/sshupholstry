@@ -461,7 +461,7 @@ i {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1299px) {
+@media only screen and (min-width: 669px) and (max-width: 1299px) {
   .App {
     min-height: 100vh;
     position: relative;
@@ -1090,10 +1090,9 @@ i {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    height: 1000px;
   }
   .App .booking .form-box .form-switch {
-    width: 40%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1168,6 +1167,7 @@ i {
             box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);
   }
   .App .booking .booking-header h1 {
+    text-align: center;
     font-family: Bebas Neue;
     text-transform: uppercase;
     color: #f4f9fb;
@@ -1254,7 +1254,6 @@ i {
     display: grid;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    grid-gap: 16px;
   }
   .App .partners div div {
     display: -webkit-box;

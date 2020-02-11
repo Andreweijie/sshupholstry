@@ -17,11 +17,31 @@ class App extends Component {
     name: "",
     email: "",
     mobile: "",
-    VehicleNo: "",
+    vehicleNo: "",
     vehicleModel: "",
+    service: "ARM REST",
+    remarks: "",
     date: "",
-    time: "",
+    time: "9AM-12PM",
     loading: "Book Now",
+    services: [
+      "ARM REST",
+      "CARPET",
+      "DOOR PANEL",
+      "DASHBOARD",
+      "FURNITURE",
+      "GEAR KNOB",
+      "HANDBRAKE",
+      "ROOF-LINING",
+      "STEERING WHEEL",
+      "SUN VISOR",
+      "SOFT CONVERTIBLE TOP",
+      "SEATS",
+      "VAN INTERIOR CONVERSION",
+      "INSURANCE CLAIM",
+      "V-KOOL"
+    ],
+    timings: ["9AM-12PM", "1PM-3PM", "4PM-6PM"],
     days: [
       "sunday",
       "monday",
@@ -43,6 +63,49 @@ class App extends Component {
   };
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.checked });
+  };
+
+  onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    let url;
+    let newAppt;
+    if (!this.state.appt) {
+      newAppt = {
+        name: this.state.name,
+        email: this.state.email,
+        mobile: this.state.mobile,
+        vehicleNo: this.state.vehicleNo,
+        vehicleModel: this.state.vehicleModel,
+        service: this.state.service,
+        date: this.state.date,
+        time: this.state.time,
+        remarks: this.state.remarks
+      };
+      url = "https://andreweijie.tech/backend/shh/appointment";
+    } else {
+      newAppt = {
+        name: this.state.name,
+        email: this.state.email,
+        mobile: this.state.mobile
+      };
+      url = "https://andreweijie.tech/backend/shh/delivery";
+    }
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(newAppt)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
   };
   render() {
     return (
@@ -81,7 +144,7 @@ class App extends Component {
             </div>
           </div>
           <div className="about-second">
-            <img src={require("./images/about.jpg")}></img>
+            <img src={require("./images/about2.jpg")}></img>
             <div className="caption-second">
               <h2>
                 <span>COMMUNITY</span> FOR CAR ENTHUSIASTS
@@ -194,9 +257,9 @@ class App extends Component {
                   <label>Vehicle No*</label>
                   <input
                     required
-                    value={this.state.VehicleNo}
+                    value={this.state.vehicleNo}
                     onChange={this.onChange}
-                    id="VehicleNo"
+                    id="vehicleNo"
                     type="text"
                   ></input>
                 </div>
@@ -222,28 +285,9 @@ class App extends Component {
                     onChange={this.onChange}
                     id="service"
                   >
-                    <option value="Arm Rest">Arm Rest</option>
-                    <option value="Carpet">Carpet</option>
-                    <option value="Door Panel">Door Panel</option>
-                    <option value="Dashboard">Dashboard</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Gear Knob">Gear Knob</option>
-                    <option value="Handbrake">Handbrake</option>
-                    <option value="Roof-Lining">Roof-Lining</option>
-                    <option value="Steering Wheel">Steering Wheel</option>
-                    <option value="Sun Visor">Sun Visor</option>
-                    <option value="Soft Convertible Top">
-                      Soft Convertible Top
-                    </option>
-                    <option value="Seats">Seats</option>
-                    <option value="Van Interior Conversion">
-                      Van Interior Conversion
-                    </option>
-                    <option value="Insurance Claim">Insurance Claim</option>
-                    <option value="Van Window Conversion">
-                      Van Window Conversion
-                    </option>
-                    <option value="V-Kool">V-Kool</option>
+                    {this.state.services.map(service => {
+                      return <option>{service}</option>;
+                    })}
                   </select>
                 </div>
               ) : null}
@@ -268,9 +312,9 @@ class App extends Component {
                     onChange={this.onChange}
                     id="time"
                   >
-                    <option value="9am - 12pm">9am - 12pm</option>
-                    <option value="1pm - 3pm">1pm - 3pm</option>
-                    <option value="4pm - 6pm">4pm - 6pm</option>
+                    {this.state.timings.map(timing => {
+                      return <option>{timing}</option>;
+                    })}
                   </select>
                 </div>
               ) : null}
@@ -285,7 +329,9 @@ class App extends Component {
                 </div>
               ) : null}
 
-              <button className="full-width">Submit</button>
+              <button onClick={this.handleSubmit} className="full-width">
+                Submit
+              </button>
             </form>
           </div>
         </div>
