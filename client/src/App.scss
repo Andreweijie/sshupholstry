@@ -43,22 +43,29 @@
       format("svg");
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background-color: #f4f9fb;
   font-family: Anton;
   color: #111a2f;
 }
-
+.App {
+  width: 100%;
+}
 a {
   text-decoration: none;
   color: #fff;
 }
 i {
   border-color: #c69c6d !important;
+}
+
+nav {
+  a {
+    transition: 0.2s;
+    &:hover {
+      color: #ef233c !important;
+    }
+  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -378,7 +385,6 @@ i {
       display: flex;
       justify-content: space-around;
       padding: 8px;
-      position: absolute;
       top: 0;
       width: 100%;
       .links {
@@ -573,7 +579,7 @@ i {
     .services {
       display: flex;
       justify-content: center;
-      padding: 16px;
+      padding: 32px;
       .services-list {
         h1 {
           margin-top: 0;
@@ -590,8 +596,8 @@ i {
       }
       .service-icons {
         display: grid;
-        grid-template-columns: repeat(3, 300px);
-        grid-template-rows: repeat(3, 280px);
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: repeat(3, 250px);
         .serv-block {
           display: flex;
           flex-direction: column;
@@ -621,7 +627,7 @@ i {
       }
       div {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 16px;
         div {
           display: flex;
@@ -637,6 +643,7 @@ i {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      padding: 32px;
       .contact-info {
         .info-block {
           h2,
@@ -804,7 +811,7 @@ i {
       align-items: center;
       .form-box {
         background-color: #fff;
-        width: 80%;
+        width: 100%;
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -825,8 +832,9 @@ i {
         }
         form {
           display: grid;
-          grid-template-columns: repeat(1, 1fr) !important;
+          grid-template-columns: repeat(1, 400px) !important;
           button {
+            margin: 24px;
             border: none;
             background-color: #ef233c;
             color: white;
@@ -863,7 +871,7 @@ i {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 85%;
+        width: 95%;
         border-radius: 0.5em;
         padding: 2em;
         box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3); //#d90429;

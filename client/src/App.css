@@ -16,14 +16,14 @@
   src: url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c6ae0b5133c55f46cc12ae0f2d43941.svg#Bebas Neue Regular") format("svg");
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background-color: #f4f9fb;
   font-family: Anton;
   color: #111a2f;
+}
+
+.App {
+  width: 100%;
 }
 
 a {
@@ -33,6 +33,15 @@ a {
 
 i {
   border-color: #c69c6d !important;
+}
+
+nav a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ef233c !important;
 }
 
 @media only screen and (min-width: 1300px) {
@@ -473,7 +482,6 @@ i {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 8px;
-    position: absolute;
     top: 0;
     width: 100%;
   }
@@ -754,7 +762,7 @@ i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 16px;
+    padding: 32px;
   }
   .App .services .services-list h1 {
     margin-top: 0;
@@ -771,10 +779,10 @@ i {
   .App .services .service-icons {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (300px)[3];
-        grid-template-columns: repeat(3, 300px);
-    -ms-grid-rows: (280px)[3];
-        grid-template-rows: repeat(3, 280px);
+    -ms-grid-columns: (250px)[3];
+        grid-template-columns: repeat(3, 250px);
+    -ms-grid-rows: (250px)[3];
+        grid-template-rows: repeat(3, 250px);
   }
   .App .services .service-icons .serv-block {
     display: -webkit-box;
@@ -813,8 +821,8 @@ i {
   .App .partners div {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
   }
   .App .partners div div {
@@ -838,6 +846,7 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 32px;
   }
   .App .find .contact-info .info-block h2,
   .App .find .contact-info .info-block a {
@@ -1075,7 +1084,7 @@ i {
   }
   .App .booking .form-box {
     background-color: #fff;
-    width: 80%;
+    width: 100%;
     padding: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1111,10 +1120,11 @@ i {
   .App .booking .form-box form {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[1] !important;
-        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-columns: (400px)[1] !important;
+        grid-template-columns: repeat(1, 400px) !important;
   }
   .App .booking .form-box form button {
+    margin: 24px;
     border: none;
     background-color: #ef233c;
     color: white;
@@ -1160,7 +1170,7 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 85%;
+    width: 95%;
     border-radius: 0.5em;
     padding: 2em;
     -webkit-box-shadow: 0.625rem 2.75rem 3.375rem 0 rgba(217, 4, 41, 0.3);

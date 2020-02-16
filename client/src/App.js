@@ -206,7 +206,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="booking section">
+        <div id="book" className="booking section">
           <div className="booking-header">
             <h1>Book An Appointment</h1>
           </div>
@@ -370,8 +370,9 @@ class App extends Component {
               <img alt="" src={require("./images/ins/msig.png")} />
             </div>
           </div>
+          <h1 style={{ textAlign: "center" }}>And more!</h1>
         </div>
-        <div className="find section">
+        <div id="find" className="find section">
           <div className="contact-info">
             <div className="info-block">
               <h1>PHONE</h1>

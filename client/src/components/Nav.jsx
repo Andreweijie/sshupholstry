@@ -6,9 +6,11 @@ export default class Nav extends Component {
       <div className="nav">
         <nav className="links">
           <img className="nav-logo" src={require("../images/logo.svg")}></img>
-          <a>Services</a>
-          <a>Contact</a>
-          <a>Book Now</a>
+          <a href="#services">Services</a>
+          <a href="#find">Contact</a>
+          <a id="book-button" href="#book">
+            Book Now
+          </a>
         </nav>
       </div>
     );
