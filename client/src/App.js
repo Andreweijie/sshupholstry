@@ -41,7 +41,15 @@ class App extends Component {
       "INSURANCE CLAIM",
       "V-KOOL"
     ],
-    timings: ["9AM-12PM", "1PM-3PM", "4PM-6PM"],
+    timings: [
+      "9AM-10AM",
+      "10AM-11AM",
+      "1PM-2PM",
+      "3PM-4PM",
+      "4PM-5PM",
+      "5PM-6PM"
+    ],
+    weekendTiming: ["9AM-10AM", "10AM-11AM", "1PM-2PM", "3PM-4PM", "4PM-5PM"],
     days: [
       "sunday",
       "monday",
@@ -108,6 +116,8 @@ class App extends Component {
       });
   };
   render() {
+    let toDay = new Date();
+    let dayToday = toDay.getDay();
     return (
       <div className="App">
         <Nav></Nav>
@@ -175,6 +185,13 @@ class App extends Component {
               <li>SOFT CONVERTIBLE TOP</li>
               <li>WINDSCREEN & CLAIMS</li>
             </ul>
+            <h2>
+              Click{" "}
+              <a href="https://www.facebook.com/pg/sshupholstery/photos/?ref=page_internal">
+                here
+              </a>{" "}
+              to view pictures of our work at our Facebook page!
+            </h2>
           </div>
           <div className="service-icons">
             <div className="serv-block">
@@ -220,7 +237,14 @@ class App extends Component {
               />
               <span>pickup/delivery</span>
             </div>
-
+            <div className="delivery-msg">
+              <h3>
+                Let us pick up your vehicle at home and return it to you when it
+                is completed. <br></br>Book an appointment for a Pick Up &
+                Delivery service @ S$50 round trip *Terms & Conditions apply.
+                <br></br>Pick Up & Delivery service @ S$50 roundtrip
+              </h3>
+            </div>
             <form>
               <div className="form-group first-col">
                 <label>Name*</label>
@@ -312,9 +336,13 @@ class App extends Component {
                     onChange={this.onChange}
                     id="time"
                   >
-                    {this.state.timings.map(timing => {
-                      return <option>{timing}</option>;
-                    })}
+                    {dayToday !== 6
+                      ? this.state.timings.map(timing => {
+                          return <option>{timing}</option>;
+                        })
+                      : this.state.weekendTiming.map(timing => {
+                          return <option>{timing}</option>;
+                        })}
                   </select>
                 </div>
               ) : null}
@@ -332,6 +360,17 @@ class App extends Component {
               <button onClick={this.handleSubmit} className="full-width">
                 Submit
               </button>
+              {this.state.appt ? (
+                <div className="delivery-msg">
+                  <h3>
+                    Let us pick up your vehicle at home and return it to you
+                    when it is completed. <br></br>Book an appointment for a
+                    Pick Up & Delivery service @ S$50 round trip *Terms &
+                    Conditions apply. Pick Up & Delivery service @ S$50
+                    roundtrip
+                  </h3>
+                </div>
+              ) : null}
             </form>
           </div>
         </div>
@@ -371,6 +410,21 @@ class App extends Component {
             </div>
           </div>
           <h1 style={{ textAlign: "center" }}>And more!</h1>
+          <div className="ins-proc">
+            <h1>Procedure</h1>
+            <h3>Come to our workshop with your insurance certificate</h3>
+            <hr></hr>
+            <h3>We will submit your claims for approval</h3>
+            <hr></hr>
+            <h3>
+              Once it is approved, we will commence work to remove the damaged
+              windscreen
+            </h3>
+            <hr></hr>
+            <h3>After 3-4 hours, your vehicle is ready for collection!</h3>
+            <hr></hr>
+            <h5>*We only do insurance claims for windscreens</h5>
+          </div>
         </div>
         <div id="find" className="find section">
           <div className="contact-info">
@@ -437,7 +491,7 @@ class App extends Component {
               ></FontAwesomeIcon>
             </a>
           </div>
-          privacy policy
+          <a href="http://privacy-policy.shhupholstery.com/">privacy policy</a>
         </div>
       </div>
     );

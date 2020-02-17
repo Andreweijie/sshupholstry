@@ -44,6 +44,15 @@ nav a:hover {
   color: #ef233c !important;
 }
 
+.delivery-msg {
+  font-family: Bebas Neue;
+  background-color: #edf2f4;
+  border-radius: 0.3em;
+  padding: 16px;
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
 @media only screen and (min-width: 1300px) {
   .App {
     min-height: 100vh;
@@ -339,6 +348,12 @@ nav a:hover {
   .App .services .services-list h1 {
     margin-top: 0;
   }
+  .App .services .services-list h2 {
+    font-family: Bebas Neue;
+  }
+  .App .services .services-list h2 a {
+    color: #ef233c;
+  }
   .App .services .services-list ul {
     list-style-type: none;
     padding-left: 0;
@@ -383,6 +398,16 @@ nav a:hover {
   }
   .App .partners {
     min-height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .App .partners h1 {
     text-transform: uppercase;
@@ -406,6 +431,35 @@ nav a:hover {
   .App .partners div div img {
     height: 300px;
     width: auto;
+  }
+  .App .partners .ins-proc {
+    font-family: Bebas Neue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 600px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0.625rem 2.75rem 4.375rem 0 rgba(0, 0, 60, 0.3);
+            box-shadow: 0.625rem 2.75rem 4.375rem 0 rgba(0, 0, 60, 0.3);
+  }
+  .App .partners .ins-proc hr {
+    border: 0.5px solid #111a2f;
+    width: 550px;
+  }
+  .App .partners .ins-proc h3 {
+    font-size: 24px;
+  }
+  .App .partners .ins-proc h5 {
+    font-size: 16px;
   }
   .App .find {
     display: -webkit-box;
@@ -766,6 +820,12 @@ nav a:hover {
   }
   .App .services .services-list h1 {
     margin-top: 0;
+  }
+  .App .services .services-list h2 {
+    font-family: Bebas Neue;
+  }
+  .App .services .services-list h2 a {
+    color: #ef233c;
   }
   .App .services .services-list ul {
     list-style-type: none;
@@ -1202,6 +1262,12 @@ nav a:hover {
   }
   .App .services .services-list h1 {
     margin-top: 0;
+  }
+  .App .services .services-list h2 {
+    font-family: Bebas Neue;
+  }
+  .App .services .services-list h2 a {
+    color: #ef233c;
   }
   .App .services .services-list ul {
     list-style-type: none;
