@@ -24,6 +24,7 @@ class App extends Component {
     date: "",
     time: "9AM-12PM",
     loading: "Book Now",
+    button: "Submit",
     services: [
       "ARM REST",
       "CARPET",
@@ -74,10 +75,21 @@ class App extends Component {
   };
 
   onChange = e => {
-    this.setState({ [e.target.id]: e.target.value });
+    this.setState({ [e.target.id]: e.target.value }, () => {
+      let selected = new Date(this.state.date).getDay();
+      if (selected === 0) {
+        message("Sorry, we are closed on Sundays", "error");
+        this.setState({
+          date: ""
+        });
+      }
+    });
   };
   handleSubmit = e => {
     e.preventDefault();
+    this.setState({
+      button: "Submitting..."
+    });
     let url;
     let newAppt;
     if (!this.state.appt) {
@@ -112,11 +124,20 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        if (data) {
+          this.setState(
+            {
+              button: "Submit"
+            },
+            () => {
+              message("Successfully Submitted!", "success");
+            }
+          );
+        }
       });
   };
   render() {
-    let toDay = new Date();
+    let toDay = new Date(this.state.date);
     let dayToday = toDay.getDay();
     return (
       <div className="App">
@@ -237,14 +258,17 @@ class App extends Component {
               />
               <span>pickup/delivery</span>
             </div>
-            <div className="delivery-msg">
-              <h3>
-                Let us pick up your vehicle at home and return it to you when it
-                is completed. <br></br>Book an appointment for a Pick Up &
-                Delivery service @ S$50 round trip *Terms & Conditions apply.
-                <br></br>Pick Up & Delivery service @ S$50 roundtrip
-              </h3>
-            </div>
+            {this.state.appt ? (
+              <div className="delivery-msg">
+                <h3>
+                  Let us pick up your vehicle at home and return it to you when
+                  it is completed. <br></br>Book an appointment for a Pick Up &
+                  Delivery service @ S$50 round trip *Terms & Conditions apply.
+                  <br></br>Pick Up & Delivery service @ S$50 roundtrip
+                </h3>
+              </div>
+            ) : null}
+
             <form>
               <div className="form-group first-col">
                 <label>Name*</label>
@@ -346,31 +370,10 @@ class App extends Component {
                   </select>
                 </div>
               ) : null}
-              {!this.state.appt ? (
-                <div className="form-group full-width">
-                  <label>Remarks</label>
-                  <textarea
-                    value={this.state.remarks}
-                    onChange={this.onChange}
-                    id="remarks"
-                  ></textarea>
-                </div>
-              ) : null}
 
               <button onClick={this.handleSubmit} className="full-width">
-                Submit
+                {this.state.button}
               </button>
-              {this.state.appt ? (
-                <div className="delivery-msg">
-                  <h3>
-                    Let us pick up your vehicle at home and return it to you
-                    when it is completed. <br></br>Book an appointment for a
-                    Pick Up & Delivery service @ S$50 round trip *Terms &
-                    Conditions apply. Pick Up & Delivery service @ S$50
-                    roundtrip
-                  </h3>
-                </div>
-              ) : null}
             </form>
           </div>
         </div>
@@ -411,7 +414,7 @@ class App extends Component {
           </div>
           <h1 style={{ textAlign: "center" }}>And more!</h1>
           <div className="ins-proc">
-            <h1>Procedure</h1>
+            <h1>Claims Procedure</h1>
             <h3>Come to our workshop with your insurance certificate</h3>
             <hr></hr>
             <h3>We will submit your claims for approval</h3>

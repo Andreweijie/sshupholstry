@@ -664,6 +664,30 @@ nav {
       }
     }
     .partners {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .ins-proc {
+        font-family: Bebas Neue;
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        align-items: flex-start;
+        background-color: #fff;
+        padding: 24px;
+        border-radius: 0.3em;
+        box-shadow: 0.625rem 2.75rem 4.375rem 0 rgba(0, 0, 60, 0.3);
+        hr {
+          border: 0.5px solid #111a2f;
+          width: 550px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        h5 {
+          font-size: 16px;
+        }
+      }
       min-height: 60vh;
       h1 {
         text-transform: uppercase;
@@ -737,7 +761,7 @@ nav {
     }
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 300px) and (max-width: 768px) {
   .App {
     .nav {
       display: flex;
@@ -801,7 +825,7 @@ nav {
         width: 350px;
         padding: 36px;
         p {
-          font-size: 1.3em;
+          font-size: 1.4em;
           font-family: Bebas Neue;
         }
       }
@@ -876,7 +900,7 @@ nav {
         }
         form {
           display: grid;
-          grid-template-columns: repeat(1, 400px) !important;
+          grid-template-columns: repeat(1, 350px) !important;
           button {
             margin: 24px;
             border: none;
@@ -969,7 +993,7 @@ nav {
           align-items: center;
           img {
             //transform: scale(0.8);
-            width: 300px;
+            width: 200px;
             height: auto;
           }
           span {
@@ -984,6 +1008,30 @@ nav {
       }
     }
     .partners {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .ins-proc {
+        font-family: Bebas Neue;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        align-items: flex-start;
+        background-color: #fff;
+        padding: 24px;
+        border-radius: 0.3em;
+        box-shadow: 0.625rem 2.75rem 4.375rem 0 rgba(0, 0, 60, 0.3);
+        hr {
+          border: 0.5px solid #111a2f;
+          width: 300px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        h5 {
+          font-size: 16px;
+        }
+      }
       min-height: 60vh;
       h1 {
         text-transform: uppercase;
@@ -991,13 +1039,13 @@ nav {
       }
       div {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         div {
           display: flex;
           justify-content: center;
           img {
-            height: 300px;
+            height: 150px;
             width: auto;
           }
         }
