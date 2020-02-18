@@ -984,8 +984,8 @@ nav {
       }
       .service-icons {
         display: grid;
-        grid-template-columns: repeat(1, 300px);
-        grid-template-rows: repeat(9, 300px);
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 120px);
         .serv-block {
           display: flex;
           flex-direction: column;
@@ -993,7 +993,7 @@ nav {
           align-items: center;
           img {
             //transform: scale(0.8);
-            width: 200px;
+            width: 100px;
             height: auto;
           }
           span {

@@ -189,7 +189,7 @@ class App extends Component {
         </div>
         <div id="services" className="services section">
           <div className="services-list">
-            <h1>OUR SERVICES INCLUDE</h1>
+            <h1>OUR SERVICES</h1>
             <ul>
               <li>ARM REST</li>
               <li>CARPET</li>

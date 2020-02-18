@@ -1325,10 +1325,10 @@ nav a:hover {
   .App .services .service-icons {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (300px)[1];
-        grid-template-columns: repeat(1, 300px);
-    -ms-grid-rows: (300px)[9];
-        grid-template-rows: repeat(9, 300px);
+    -ms-grid-columns: (100px)[3];
+        grid-template-columns: repeat(3, 100px);
+    -ms-grid-rows: (120px)[3];
+        grid-template-rows: repeat(3, 120px);
   }
   .App .services .service-icons .serv-block {
     display: -webkit-box;
@@ -1346,7 +1346,7 @@ nav a:hover {
             align-items: center;
   }
   .App .services .service-icons .serv-block img {
-    width: 200px;
+    width: 100px;
     height: auto;
   }
   .App .services .service-icons .serv-block span {
