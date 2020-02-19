@@ -149,7 +149,7 @@ class App extends Component {
           </div>
           <div className="about-text">
             <p>
-              Established in 1980, SSH has a vast experience in upholstery for
+              Established in 1980, SHH has a vast experience in upholstery for
               automotives. <br></br>Over the years, we have added windscreen
               replacement and insurance claims into our services as well.
               <br></br>
@@ -370,7 +370,18 @@ class App extends Component {
                   </select>
                 </div>
               ) : null}
-
+              {!this.state.appt ? (
+                <div className="form-group full-width">
+                  <label>Message*</label>
+                  <textarea
+                    required
+                    value={this.state.remarks}
+                    onChange={this.onChange}
+                    id="remarks"
+                    type="text"
+                  ></textarea>
+                </div>
+              ) : null}
               <button onClick={this.handleSubmit} className="full-width">
                 {this.state.button}
               </button>
