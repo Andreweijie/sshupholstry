@@ -208,7 +208,7 @@ class App extends Component {
             </ul>
             <h2>
               Click{" "}
-              <a href="https://www.facebook.com/pg/sshupholstery/photos/?ref=page_internal">
+              <a href="https://www.facebook.com/pg/shhupholstery/photos/?ref=page_internal">
                 here
               </a>{" "}
               to view pictures of our work at our Facebook page!
@@ -498,7 +498,7 @@ class App extends Component {
             <a href="https://www.instagram.com/shh.upholstery/">
               <FontAwesomeIcon size="2x" icon={faInstagram}></FontAwesomeIcon>
             </a>
-            <a href="https://www.facebook.com/sshupholstery/">
+            <a href="https://www.facebook.com/shhupholstery/">
               <FontAwesomeIcon
                 size="2x"
                 icon={faFacebookSquare}
